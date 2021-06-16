@@ -23,8 +23,6 @@ import { ShoppingItem } from './shopping-item.interface';
   <button (click)="add(itemName.value, itemQuantity.value)">Add</button>
   <p>{{ error?.message }}</p>
   <p *ngIf="error">{{ error?.error | json }}</p>
-
-  <button (click)="logout()">deslogar</button>
   `
 })
 export class ListComponent implements OnInit {
