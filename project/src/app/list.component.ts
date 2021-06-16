@@ -8,7 +8,7 @@ import { ShoppingItem } from './shopping-item.interface';
   template: `
   <div style="text-align:center">
     <h1>
-      Lista de compras
+      Shopping list
     </h1>
   </div>
   <ul>

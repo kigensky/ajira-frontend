@@ -12,9 +12,11 @@ import { AuthService } from './auth.service';
     </h1>
   </div>
 
-  <input #username type='text' placeholder='username'>
-  <input #password type='password' placeholder='password'>
-  <button (click)="login(username.value, password.value)">login</button>
+  <div style="text-align:center">
+   <input #username type='text' placeholder='username'>
+   <input #password type='password' placeholder='password'>
+   <button (click)="login(username.value, password.value)">login</button>
+  </div>
   <p>{{ error?.message }}</p>
   <p *ngIf="error">{{ error?.error | json }}</p>
   `
