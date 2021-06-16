@@ -8,15 +8,16 @@ import { AuthService } from './auth.service';
   template: `
   <div style="text-align:center">
     <h1>
-      Cadastrar
+      SIGN-UP
     </h1>
   </div>
-
-  <input #username type='text' placeholder='username'>
-  <input #email type='text' placeholder='email'>
-  <input #password1 type='password' placeholder='password1'>
-  <input #password2 type='password' placeholder='password2'>
-  <button (click)="signup(username.value, email.value, password1.value, password2.value)">cadastrar</button>
+  <div style="text-align:center">
+    <input #username type='text' placeholder='username'>
+    <input #email type='text' placeholder='email'>
+    <input #password1 type='password' placeholder='password1'>
+    <input #password2 type='password' placeholder='password2'>
+    <button (click)="signup(username.value, email.value, password1.value, password2.value)">sign-up</button>
+  </div>
   <p>{{ error?.message }}</p>
   <p *ngIf="error">{{ error?.error | json }}</p>
   `
