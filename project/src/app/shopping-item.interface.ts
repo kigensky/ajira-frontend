@@ -1,7 +1,6 @@
 export interface ShoppingItem {
-    id: number;
-    name: string;
-    quantity: number;
-    checked: boolean;
-  }
-  
+  id: number;
+  name: string;
+  quantity: number;
+  checked: boolean;
+}
