@@ -5,24 +5,8 @@ import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-signup',
-  template: `
-  <div style="text-align:center">
-    <h1>
-      SIGN-UP
-    </h1>
-  </div>
-  <form>
-    <div style="text-align:center">
-      <input #username type='text' placeholder='username'>
-      <input #email type='text' placeholder='email'>
-      <input #password1 type='password' placeholder='password1'>
-      <input #password2 type='password' placeholder='password2'>
-      <button (click)="signup(username.value, email.value, password1.value, password2.value)">sign-up</button>
-    </div>
-  </form>  
-  <p>{{ error?.message }}</p>
-  <p *ngIf="error">{{ error?.error | json }}</p>
-  `
+  templateUrl: './login.component.html'
+  
 })
 export class SignupComponent implements OnInit {
 
