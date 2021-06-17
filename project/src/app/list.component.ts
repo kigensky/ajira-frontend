@@ -6,24 +6,14 @@ import { ShoppingItem } from './shopping-item.interface';
 @Component({
   selector: 'app-list',
   template: `
-  <div style="text-align:center">
-    <h1>
-      Shopping list
-    </h1>
-  </div>
-  <ul>
-    <li *ngFor="let item of items">
-      <h2>{{ item.quantity }}x {{ item.name }}
-      <button (click)="delete(item.id)">x</button></h2>
-    </li>
-  </ul>
-
-  <input #itemQuantity type='text' placeholder='Qtd'>
-  <input #itemName type='text' placeholder='Name'>
-  <button (click)="add(itemName.value, itemQuantity.value)">Add</button>
-  <p>{{ error?.message }}</p>
-  <p *ngIf="error">{{ error?.error | json }}</p>
-  `
+  <div class="body" style="background-image: url(../assets/bc.jpeg)">  
+    <div style="text-align:center">
+      <h1>
+        Employee
+      </h1>
+    </div>
+    
+  </div>`
 })
 export class ListComponent implements OnInit {
 
