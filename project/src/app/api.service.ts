@@ -10,17 +10,17 @@ export class ApiService {
 
 
   getShoppingItems() {
-    return this.http.get(this.apiRoot.concat('shopping-item/'));
+    return this.http.get(this.apiRoot.concat('api/employee/'));
   }
 
   createShoppingItem(name: string, quantity: number) {
     return this.http.post(
-      this.apiRoot.concat('shopping-item/'),
+      this.apiRoot.concat('api/employee/'),
       { name, quantity }
     );
   }
 
   deleteShoppingItem(id: number) {
-    return this.http.delete(this.apiRoot.concat(`shopping-item/${id}/`));
+    return this.http.delete(this.apiRoot.concat(`api/employee/${id}/`));
   }
 }
