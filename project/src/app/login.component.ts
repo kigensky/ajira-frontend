@@ -13,9 +13,7 @@ import { AuthService } from './auth.service';
   
 })
 
-export class AppimageComponent {  
-  constructor() { }   
-}    
+
 export class LoginComponent implements OnInit {
 
   error: any;

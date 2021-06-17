@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ApiService } from './api.service';
-import { ShoppingItem } from './shopping-item.interface';
+import { Employees } from './employees.interface';
 
 @Component({
   selector: 'app-list',
@@ -17,27 +17,27 @@ import { ShoppingItem } from './shopping-item.interface';
 })
 export class ListComponent implements OnInit {
 
-  items: ShoppingItem[];
+  items: Employees[];
   error: any;
 
   constructor(private api: ApiService) { }
 
   ngOnInit() {
-    this.api.getShoppingItems().subscribe(
-      (items: ShoppingItem[]) => this.items = items,
+    this.api.getEmployees().subscribe(
+      (items: Employees[]) => this.items = items,
       (error: any) => this.error = error
     );
   }
 
-  add(itemName: string, itemQuantity: number) {
-    this.api.createShoppingItem(itemName, itemQuantity).subscribe(
-      (item: ShoppingItem) => this.items.push(item),
+  add(employeesName: string, employeesDepartment: number ) {
+    this.api. Employees(employeesName, employeesDepartment).employees(
+      (name: Employees) => this.items.push(name),
       (error: any) => this.error = error
     );
   }
 
   delete(id: number) {
-    this.api.deleteShoppingItem(id).subscribe(
+    this.api.deleteEmployees(id).subscribe(
       (success: any) => this.items.splice(
         this.items.findIndex(item => item.id === id)
       ),
@@ -45,3 +45,7 @@ export class ListComponent implements OnInit {
     );
   }
 }
+function employeesName(employeesName: any, employeeDepartment: any) {
+  throw new Error('Function not implemented.');
+}
+

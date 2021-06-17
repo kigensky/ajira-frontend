@@ -5,7 +5,7 @@ import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-signup',
-  templateUrl: './login.component.html'
+  templateUrl: './signup.component.html'
   
 })
 export class SignupComponent implements OnInit {
