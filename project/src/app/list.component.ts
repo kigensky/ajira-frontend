@@ -49,7 +49,7 @@ export class ListComponent implements OnInit {
   }
 
   delete(id: number) {
-    this.api.deleteShoppingItem(id).subscribe(
+    this.api.createShoppingItem(id).subscribe(
       (success: any) => this.items.splice(
         this.items.findIndex(item => item.id === id)
       ),
