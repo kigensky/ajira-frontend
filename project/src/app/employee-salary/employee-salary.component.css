@@ -63,7 +63,7 @@ body {
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
-    height: 80%;
+    height: 65%;
     margin-top: 10px;
 }
 label {
@@ -122,6 +122,11 @@ h1, .h1 {
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
-    height: 80%;
+    height: 60%;
     margin-top: 20px;
+}
+h1[_ngcontent-hel-c17], .h1[_ngcontent-hel-c17] {
+    font-size: 2.5rem;
+    margin-left: 50px;
+    padding-top: 20px;
 }
