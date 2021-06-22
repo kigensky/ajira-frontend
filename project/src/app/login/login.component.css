@@ -1,4 +1,4 @@
-/* body {
+body {
     margin: 0;
     font-family: var(--bs-font-sans-serif);
     font-size: 1rem;
@@ -19,6 +19,7 @@
     padding-left: 100mm;
     padding-right: 100mm;
 }
+
 .card {
     position: relative;
     display: flex;
@@ -31,4 +32,4 @@
     border-radius: .25rem;
     height: 290px;
     align-items: center;
-} */
+}

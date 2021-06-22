@@ -11,7 +11,7 @@ import { PostComponent } from './post/post.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
-  {path: 'home', component: HomeComponent},
+  {path: '', component: HomeComponent},
   {path: 'register', component: RegisterComponent},
   { path: "homepage", component: HomepageComponent },
   { path: "employee-form", component: EmployeeFormComponent },
