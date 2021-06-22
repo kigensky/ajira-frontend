@@ -1,45 +1,60 @@
-.card-home img{
+.card-home img {
     cursor: pointer;
     height: 250px !important;
     width: 100%;
 }
 
-@media(max-width:768px){
-    .card-home img{
-        height: 175px !important; 
+@media(max-width:768px) {
+    .card-home img {
+        height: 175px !important;
     }
 }
 
-
-.card img{
-        width: 100%;
+.card img {
+    width: 100%;
 }
 
-body{
+body {
     background-color: #F2e2d2;
     color: white;
 }
-.navbar{
+
+.navbar {
     background-color: #1841f8;
     box-shadow: 0px 5px 9px #3c3c3e;
     color: white;
 }
 
-
-h3, .h3 {
+h3,
+.h3 {
     font-size: calc(1.3rem + 0.6vw);
 }
-h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+
+h6,
+.h6,
+h5,
+.h5,
+h4,
+.h4,
+h3,
+.h3,
+h2,
+.h2,
+h1,
+.h1 {
     margin-top: 0;
     margin-bottom: 0.5rem;
     font-weight: 500;
     line-height: 1.2;
 }
-*, *::before, *::after {
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
-user agent stylesheet
-h3 {
+
+user agent stylesheet h3 {
     display: block;
     font-size: 1.17em;
     margin-block-start: 1em;
@@ -48,9 +63,23 @@ h3 {
     margin-inline-end: 0px;
     font-weight: bold;
 }
+
 .navbar-light .navbar-brand {
     color: white;
 }
-.navbar-light .navbar-nav .nav-link {
-    color: white;
+
+.navbar-dark .navbar-brand {
+    color: rgb(255, 255, 255);
+    font-size: medium;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    font-size: medium;
 }
