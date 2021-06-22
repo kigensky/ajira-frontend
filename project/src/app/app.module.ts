@@ -14,6 +14,8 @@ import { LoginComponent } from './login/login.component';
 
 
 
+import {HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -27,10 +29,13 @@ import { LoginComponent } from './login/login.component';
     SignupComponent,
     LoginComponent,
     
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
