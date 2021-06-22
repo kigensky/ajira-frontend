@@ -31,6 +31,7 @@ import {HttpClientModule} from '@angular/common/http';
     LoginComponent,
     HomeComponent,
     NavbarComponent,
+    NavComponent,
     LeaveFormComponent,
     EmployeeSalaryComponent,
     PostComponent,

@@ -10,10 +10,10 @@ import { LeaveFormComponent } from './leave-form/leave-form.component';
 import { PostComponent } from './post/post.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'home', component: HomeComponent},
   {path: 'register', component: RegisterComponent},
-  { path: "", component: HomepageComponent },
+  { path: "homepage", component: HomepageComponent },
   { path: "employee-form", component: EmployeeFormComponent },
   { path: "employee-salary", component: EmployeeSalaryComponent },
   { path: "leave-form", component: LeaveFormComponent },
