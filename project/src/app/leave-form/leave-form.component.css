@@ -63,8 +63,8 @@ body {
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
-    height: 80%;
-    margin-top: 10px;
+    height: 100%;
+    margin-top: 20px;
 }
 label {
     align-items: center;
@@ -122,6 +122,20 @@ h1, .h1 {
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
-    height: 80%;
+    height: 100%;
+    margin-top: 20px;
+}
+.card[_ngcontent-ike-c17] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 60px;
+    padding-right: 200px;
+    word-wrap: break-word;
+    background-color: #0202027a;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    height: 102%;
     margin-top: 20px;
 }
