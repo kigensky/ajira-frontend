@@ -1,4 +1,4 @@
-import { LeaveFormComponent } from './../components/leave-form/leave-form.component';
+import { LeaveForm } from './../interfaces/leave-form';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -12,11 +12,16 @@ const baseUrl ='http://127.0.0.1:8000/leave/'
   providedIn: 'root'
 })
 export class LeaveServiceService {
+   [x: string]: any;
 
   constructor(private http:HttpClient) { }
   
-  getAll(): Observable<LeaveFormComponent[]> {
-    return this.http.get<LeaveFormComponent[]>(baseUrl);
+  FetchleaveApi(): Observable<LeaveForm[]> {
+    return this.http.get<LeaveForm[]>(baseUrl);
+  }
+
+  create(LeaveForm: any) {
+    return this.http.post(this.baseUrl, LeaveForm)
   }
 
 }
