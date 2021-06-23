@@ -1,4 +1,3 @@
-import { LeaveForm } from './../interfaces/leave-form';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -12,16 +11,47 @@ const baseUrl ='http://127.0.0.1:8000/leave/'
   providedIn: 'root'
 })
 export class LeaveServiceService {
-   [x: string]: any;
+  
 
   constructor(private http:HttpClient) { }
   
-  FetchleaveApi(): Observable<LeaveForm[]> {
-    return this.http.get<LeaveForm[]>(baseUrl);
+  getLeaveData(id: any): Observable<any> {
+    return this.http.get(`${baseUrl}/${id}`);
   }
 
-  create(LeaveForm: any) {
-    return this.http.post(this.baseUrl, LeaveForm)
+  getLeaveDetail(id: any) {
+    return this.http.get(`${baseUrl}/${id}`);
+  }
+
+  addLeave(data:{
+    employee_name:string;
+    department:string;
+    month :string;
+    year: number;
+    Start_Date: number;
+    End_Date: number;
+    Reason: string;
+
+  }){
+    return this.http.post(baseUrl, data)
+  }
+
+  updateLeave(
+    id: any,
+    data: {
+      department:string;
+      month :string;
+      year: number;
+      Start_Date: number;
+      End_Date: number;
+      Reason: string;
+    }
+  ) {
+    return this.http.put(`${baseUrl}/${id}`, data);
+  }
+
+  deleteLeave(id: any) {
+    return this.http.delete(`${baseUrl}/${id}`);
   }
 
 }
