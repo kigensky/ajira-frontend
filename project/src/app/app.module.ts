@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EmployeeFormComponent } from './employee-form/employee-form.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { LeaveFormComponent } from './leave-form/leave-form.component';
-import { EmployeeSalaryComponent } from './employee-salary/employee-salary.component';
-import { PostComponent } from './post/post.component';
-import { HomepageComponent } from './homepage/homepage.component';
-import { SignupComponent } from './signup/signup.component';
-import { LoginComponent } from './login/login.component';
+import { EmployeeFormComponent } from './components/employee-form/employee-form.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { LeaveFormComponent } from './components/leave-form/leave-form.component';
+import { EmployeeSalaryComponent } from './components/employee-salary/employee-salary.component';
+import { PostComponent } from './components/post/post.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 
@@ -35,6 +36,8 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule ,
+
     
   ],
   providers: [],
