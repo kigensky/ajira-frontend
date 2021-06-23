@@ -1,3 +1,4 @@
+import { EmployeeForm } from './../interfaces/employee-form';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -8,25 +9,21 @@ const baseUrl ="http://127.0.0.1:8000/employee/"
   providedIn: 'root'
 })
 export class EmployeeService {
-  constructor(private http: HttpClient) {}
+  [x: string]: any;
+  
+  constructor(private http: HttpClient) {
 
-  getAllEmployee(): Observable<any> {
-    return this.http.get(`${baseUrl}`);
+   }
+   getEmployee(): Observable<any>{
+     return this.http.get<[]>(this.baseUrl);
+
+   }
+   // tslint:disable-next-line: typedef
+   create(EmployeeForm: any) {
+    return this.http.post(this.url, EmployeeForm);
   }
-
-  getEmployee(id: any): Observable<any> {
-    return this.http.get(`${baseUrl}/${id}`);
-  }
-
-  addEmployee(data: { }) {
-    return this.http.post(baseUrl, data);
-  }
-
-  updateEmployee(id: any, data: { name: string; }) {
-    return this.http.put(`${baseUrl}/${id}`, data);
-  }
-
-  deleteEmployee(id: any) {
-    return this.http.delete(`${baseUrl}/${id}`);
+  // tslint:disable-next-line: typedef
+  update(id: any, EmployeeForm:EmployeeForm): Observable<any>  {
+    return this.http.put(`${this.update_url}${id}/`, EmployeeForm);
   }
 }
