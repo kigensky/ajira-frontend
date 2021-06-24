@@ -6,12 +6,15 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { LeaveFormComponent } from './leave-form/leave-form.component';
 import { PostComponent } from './post/post.component';
 
+
+
 const routes: Routes = [
-              { path: "", component: HomepageComponent },
-              { path: "employee-form", component: EmployeeFormComponent },
-              { path: "employee-salary", component: EmployeeSalaryComponent },
-              { path: "leave-form", component: LeaveFormComponent },
-              { path: "post", component: PostComponent },
+              { path: "", component: HomepageComponent},
+              { path: "employee-form", component: EmployeeFormComponent},
+              { path: "employee-salary", component: EmployeeSalaryComponent},
+              { path: "leave-form", component: LeaveFormComponent},
+              { path: "post", component: PostComponent},
+          
 
 ];
 
