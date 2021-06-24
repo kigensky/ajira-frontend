@@ -16,6 +16,7 @@ import { LoginComponent } from './components/login/login.component';
 
 
 import {HttpClientModule} from '@angular/common/http';
+import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import {HttpClientModule} from '@angular/common/http';
     HomepageComponent,
     SignupComponent,
     LoginComponent,
+    EmployeeListComponent,
     
     
   ],
