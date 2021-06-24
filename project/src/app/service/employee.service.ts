@@ -3,13 +3,15 @@ import { Observable } from 'rxjs';
 import { HttpClient } from'@angular/common/http';
 
 const baseUrl ='http://127.0.0.1:8000/employee/'
+
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeService {
-  http: any;
 
-  constructor() { }
+  constructor(private http: HttpClient) {}
+
+
   getAllEmployee(): Observable<any> {
     return this.http.get(`${baseUrl}`);
   }
@@ -18,15 +20,17 @@ export class EmployeeService {
     return this.http.get(`${baseUrl}/${id}`);
   }
 
-  addEmployee(data: { employee_name: string; department: string; address:any; status: string ; job_title:string; }) {
+
+  addEmployee(data: { }) {
     return this.http.post(baseUrl, data);
   }
 
-  updatePost(id: any, data: { employee_name: string; status: string;}) {
+  updateEmployee(id: any, data: { name: string; }) {
     return this.http.put(`${baseUrl}/${id}`, data);
   }
 
-  deletePost(id: any) {
+  deleteEmployee(id: any) {
+
     return this.http.delete(`${baseUrl}/${id}`);
   }
 }

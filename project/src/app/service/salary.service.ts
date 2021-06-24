@@ -10,14 +10,18 @@ const baseUrl ='http://127.0.0.1:8000/employee_salary/'
   providedIn: 'root'
 })
 export class SalaryService {
-  baseUrl: any;
 
-  constructor(private http: HttpClient) { }
-  FetchSalary(): Observable<EmployeeSalary[]> {
-    return this.http.get<EmployeeSalary[]>(baseUrl);
+  constructor(private http: HttpClient) {}
+
+  getSalaryData(id: any): Observable<any> {
+    return this.http.get(`${baseUrl}/${id}`);
   }
 
-  create(EmployeeSalary: any) {
-    return this.http.post(this.baseUrl, EmployeeSalary)
+  getSalaryDetail(id: any): Observable<any> {
+    return this.http.get(`${baseUrl}/${id}`);
   }
-}
+  }
+
+  
+
+

@@ -13,17 +13,20 @@ const baseUrl ='http://127.0.0.1:8000/leave/'
 export class LeaveServiceService {
   
 
-  constructor(private http:HttpClient) { }
   
-  getLeaveData(id: any): Observable<any> {
-    return this.http.get(`${baseUrl}/${id}`);
-  }
 
-  getLeaveDetail(id: any) {
-    return this.http.get(`${baseUrl}/${id}`);
-  }
+   constructor(private http: HttpClient) {}
 
-  addLeave(data:{
+   getLeaveData(id: any): Observable<any> {
+     return this.http.get(`${baseUrl}/${id}`);
+   }
+ 
+   getLeaveDetail(id: any): Observable<any> {
+     return this.http.get(`${baseUrl}/${id}`);
+   }
+ 
+   addLeave(data: {
+
     employee_name:string;
     department:string;
     month :string;
@@ -31,6 +34,7 @@ export class LeaveServiceService {
     Start_Date: number;
     End_Date: number;
     Reason: string;
+
 
   }){
     return this.http.post(baseUrl, data)
@@ -53,5 +57,6 @@ export class LeaveServiceService {
   deleteLeave(id: any) {
     return this.http.delete(`${baseUrl}/${id}`);
   }
+
 
 }

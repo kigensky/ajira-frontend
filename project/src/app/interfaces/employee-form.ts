@@ -5,4 +5,5 @@ export interface EmployeeForm {
     address: any;
     status: string;
     job_title: string;
+
 }
