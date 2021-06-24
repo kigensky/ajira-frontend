@@ -1,4 +1,3 @@
-import { LeaveForm } from './../interfaces/leave-form';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -12,9 +11,10 @@ const baseUrl ='http://127.0.0.1:8000/leave/'
   providedIn: 'root'
 })
 export class LeaveServiceService {
-   [x: string]: any;
+  
 
   
+
    constructor(private http: HttpClient) {}
 
    getLeaveData(id: any): Observable<any> {
@@ -26,6 +26,7 @@ export class LeaveServiceService {
    }
  
    addLeave(data: {
+
     employee_name:string;
     department:string;
     month :string;
@@ -33,23 +34,29 @@ export class LeaveServiceService {
     Start_Date: number;
     End_Date: number;
     Reason: string;
-   }) {
-     return this.http.post(baseUrl, data);
-   }
- 
-   updateLeave(
-     id: any,
-     data: {
-      employee_name:string;
+
+
+  }){
+    return this.http.post(baseUrl, data)
+  }
+
+  updateLeave(
+    id: any,
+    data: {
       department:string;
+      month :string;
+      year: number;
+      Start_Date: number;
+      End_Date: number;
       Reason: string;
-     }
-   ) {
-     return this.http.put(`${baseUrl}/${id}`, data);
-   }
- 
-   deleteLeave(id: any) {
-     return this.http.delete(`${baseUrl}/${id}`);
-   }
+    }
+  ) {
+    return this.http.put(`${baseUrl}/${id}`, data);
+  }
+
+  deleteLeave(id: any) {
+    return this.http.delete(`${baseUrl}/${id}`);
+  }
+
 
 }

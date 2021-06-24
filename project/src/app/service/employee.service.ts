@@ -1,14 +1,16 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
- 
+import { HttpClient } from'@angular/common/http';
 
-const baseUrl ="http://127.0.0.1:8000/employee/"
+const baseUrl ='http://127.0.0.1:8000/employee/'
+
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeService {
+
   constructor(private http: HttpClient) {}
+
 
   getAllEmployee(): Observable<any> {
     return this.http.get(`${baseUrl}`);
@@ -17,6 +19,7 @@ export class EmployeeService {
   getEmployee(id: any): Observable<any> {
     return this.http.get(`${baseUrl}/${id}`);
   }
+
 
   addEmployee(data: { }) {
     return this.http.post(baseUrl, data);
@@ -27,6 +30,7 @@ export class EmployeeService {
   }
 
   deleteEmployee(id: any) {
+
     return this.http.delete(`${baseUrl}/${id}`);
   }
 }

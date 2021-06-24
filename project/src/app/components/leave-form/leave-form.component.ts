@@ -9,7 +9,6 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./leave-form.component.css'],
 })
 export class LeaveFormComponent implements OnInit {
-  leave: any;
 
   constructor(
     private LeaveServiceService: LeaveServiceService,
@@ -27,12 +26,18 @@ export class LeaveFormComponent implements OnInit {
     );
   }
 
+
   onSubmit(LeaveForm: any) {
     this.LeaveServiceService.create(LeaveForm).subscribe((result: any) => {
       console.warn('result', result);
     });
     console.warn(LeaveForm);
-  }
+
+
+  constructor(private LeaveServiceService:LeaveServiceService,
+    private http:HttpClient) { }
+
+  
 
   ngOnInit(): void {}
 }

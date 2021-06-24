@@ -1,6 +1,6 @@
 export interface EmployeeSalary {
-   id: any;
-   date: number;
-   amount: number;
-   employee_name: string;
+    id: any;
+    salary_date: number;
+    salary_amount: number;
+    employee_name: string;
 }

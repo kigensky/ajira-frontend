@@ -1,3 +1,5 @@
+import { EmployeeService } from './../../service/employee.service';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,8 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeSalaryComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http:HttpClient , private employeeservice: EmployeeService) { }
 
+  
   ngOnInit(): void {
   }
 
