@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { EmployeeServiceService } from '../services/employee-service.service';
 
 @Component({
   selector: 'app-post',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private employeeService: EmployeeServiceService
+  ) { }
 
   ngOnInit(): void {
+    if(!this.employeeService.getToken()) {
+      this.router.navigate(["/login"])
+    }
   }
 
 }

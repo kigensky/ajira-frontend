@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup,FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { EmployeeServiceService } from '../services/employee-service.service';
 
 @Component({
   selector: 'app-employee-form',
@@ -11,30 +12,42 @@ import { Router } from '@angular/router';
 export class EmployeeFormComponent implements OnInit {
   form: FormGroup;
 
+  public employeeData: any = {
+    employee_name: '',
+    department:'',
+    address: '',
+    status: '',
+    job_title: ''
+  }
+
+
+
+
   constructor(
     private formBuilder: FormBuilder,
     private http: HttpClient,
-    private router: Router
+    private router: Router,
+    private employeeService: EmployeeServiceService
   ) { }
 
   ngOnInit(): void {
-    this.form = this.formBuilder.group({
-      employee_name: '',
-      address: '',
-      status: '',
-      job_title: ''
-    });
+    if(!this.employeeService.getToken()) {
+      this.router.navigate(["/login"])
+    }
   }
   submit() { 
-    console.log("this.form.getRawValue()", this.form.getRawValue())
-    // this.http.post('http://localhost:8000/api/employee/', this.form.getRawValue())
-    //   .subscribe(() => ;
-    this.http.post('http://localhost:8000/api/employee/', this.form.getRawValue(), {
-      withCredentials: true
-    }).subscribe(() => { 
-      console.log("this.form.getRawValue()", this.form.getRawValue())
-      this.router.navigate(['/'])}
-    );
+    console.log("this.employeeData", this.employeeData)
+    let url= `${this.employeeService.getBaseURL()}api/employee/`
+    this.employeeService.loadPost(url, this.employeeData).then((data:any) => {
+      console.log("data", data)
+      if(data.data) {
+        alert("Employee Created successfully")
+      } else {
+        alert("Something went worng when creating the user")
+      }
+     
+    })
+    
   }
 
 }

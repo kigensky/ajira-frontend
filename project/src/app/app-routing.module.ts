@@ -8,6 +8,7 @@ import { EmployeeSalaryComponent } from './employee-salary/employee-salary.compo
 import { HomepageComponent } from './homepage/homepage.component';
 import { LeaveFormComponent } from './leave-form/leave-form.component';
 import { PostComponent } from './post/post.component';
+import { EmployeeDetailsPageComponent } from './employee-details-page/employee-details-page.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: "employee-salary", component: EmployeeSalaryComponent },
   { path: "leave-form", component: LeaveFormComponent },
   { path: "post", component: PostComponent },
+  { path: "employee-details-page", component: EmployeeDetailsPageComponent },
 
 ];
 

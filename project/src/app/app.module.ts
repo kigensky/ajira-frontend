@@ -22,6 +22,8 @@ import { SignupComponent } from './signup/signup.component';
 
 
 import {HttpClientModule} from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { EmployeeDetailsPageComponent } from './employee-details-page/employee-details-page.component';
 
 
 @NgModule({
@@ -37,6 +39,8 @@ import {HttpClientModule} from '@angular/common/http';
     PostComponent,
     HomepageComponent,
     SignupComponent,
+    EmployeeFormComponent,
+    EmployeeDetailsPageComponent
     
     
   ],
@@ -45,7 +49,8 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
     
     
   ],
