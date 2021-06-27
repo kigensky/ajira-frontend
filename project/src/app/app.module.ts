@@ -18,6 +18,8 @@ import { LoginComponent } from './login/login.component';
 
 
 import {HttpClientModule} from '@angular/common/http';
+import { SalaryDetailsPageComponent } from './salary-details-page/salary-details-page.component';
+import { NavComponent } from './nav/nav.component';
 
 
 @NgModule({
@@ -31,6 +33,8 @@ import {HttpClientModule} from '@angular/common/http';
     HomepageComponent,
     SignupComponent,
     LoginComponent,
+    SalaryDetailsPageComponent,
+    NavComponent,
     
     
   ],

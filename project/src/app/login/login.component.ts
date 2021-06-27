@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormGroup} from '@angular/forms';
+import {HttpClient} from '@angular/common/http';
+import {Router} from '@angular/router';
+
+
+
 
 @Component({
   selector: 'app-login',
@@ -7,9 +13,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  form!: FormGroup;
+
+  constructor(private formBuilder: FormBuilder,
+    private http: HttpClient,
+    private router: Router) { }
 
   ngOnInit(): void {
+    this.form = this.formBuilder.group({
+      email: '',
+      password: ''
+    });
+
   }
+
+  submit(): void {
+    console.log("this.form.getRawValue()", this.form.getRawValue())
+    this.http.post('http://localhost:8000/api/login', this.form.getRawValue(), {
+      withCredentials: true
+    }).subscribe((data:any) => { 
+      console.log("data", data)
+      // this.router.navigate(['/']) }
+      if ((data) && (data.jwt)) {
+        localStorage.setItem("ajira-tkn", JSON.stringify(data.jwt))
+        this.router.navigate(['/']) 
+        
+      }else{
+        alert("Invalid credentials")
+      }
+    });
+  }
+
+
 
 }

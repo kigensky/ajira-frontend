@@ -8,6 +8,7 @@ const baseUrl ='http://127.0.0.1:8000/employee/'
 })
 export class EmployeeServiceService {
   http: any;
+  load: any;
 
   constructor() { }
   getAllEmployee(): Observable<any> {
