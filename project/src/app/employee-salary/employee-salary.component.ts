@@ -1,7 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { EmployeeServiceService } from '../services/employee-service.service';
+import { SalaryService } from '../services/salary.service';
 
 @Component({
   selector: 'app-employee-salary',

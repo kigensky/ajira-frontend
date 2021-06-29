@@ -4,55 +4,62 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title></title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="" />
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="card-body">
-      <div class="card">
-        <h1><strong>Leave Form </strong></h1>
-        <form>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="inputAddress">Employee Name</label>
-              <input type="text" class="form-control" />
-            </div>
-            <div class="form-group">
-              <label for="inputAddress2">Department </label>
-              <input type="text" class="form-control" />
-            </div>
-            <div class="form-group">
-              <label for="inputAddress2">Month </label>
-              <input type="text" class="form-control" />
-            </div>
-            <div class="form-group">
-              <label for="inputAddress2">Year</label>
-              <input type="text" class="form-control" />
-            </div>
-            <div class="form-group">
-              <label for="inputAddress2">Start Date</label>
-              <input type="text" class="form-control" />
-            </div>
-            <div class="form-group">
-              <label for="inputAddress2">End Date</label>
-              <input type="text" class="form-control" />
-            </div>
-             <div class="form-group">
-              <label for="inputAddress2">Reason</label>
-              <input type="text" class="form-control" />
-            </div>
-            <div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-          </div>
-        </form>
-      </div>
+        <div class="card">
+            <h1><strong>Leave Form </strong></h1>
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="inputAddress">Employee Name</label>
+                        <input type="text" class="form-control" id="employee_name" name="employee_name" [(ngModel)]="leaveData.employee_name" #employee_name="ngModel" />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress2">Department </label>
+                        <select type="text" class="form-control" id="department" name="department" [(ngModel)]="leaveData.department" #department="ngModel">
+                <option value="Human Resource">Human Resource</option>
+                <option value="Accounting">Accounting</option>
+                <option value="Marketing">Marketing</option>
+              </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress2">Month </label>
+                        <input type="text" class="form-control" id="month" name="month" [(ngModel)]="leaveData.month" #month="ngModel" />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress2">Year</label>
+                        <input type="text" class="form-control" id="year" name="year" [(ngModel)]="leaveData.year" #year="ngModel" />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress2">Start Date</label>
+                        <input type="text" class="form-control" id="Start_Date" name="Start_Date" [(ngModel)]="leaveData.Start_Date" #Start_Date="ngModel" />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress2">End Date</label>
+                        <input type="text" class="form-control" id="End_Date" name="End_Date" [(ngModel)]="leaveData.End_Date" #End_Date="ngModel" />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress2">Reason</label>
+                        <input type="text" class="form-control" id="Reason" name="Reason" [(ngModel)]="leaveData.Reason" #End_Date="ngModel" />
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary" (click)="submit()">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
     <script src="" async defer></script>
-  </body>
+</body>
+
 </html>

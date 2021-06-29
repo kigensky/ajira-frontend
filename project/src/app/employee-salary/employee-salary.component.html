@@ -5,45 +5,45 @@
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
 
+
+
 <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+</head>
 
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title></title>
-        <meta name="description" content="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="" />
-    </head>
-
-    <body>
-        <div class="card-body">
-            <div class="card">
-                <h1><strong>Employee Salary </strong></h1>
-                <form>
-                    <div class="form-row">
+<body>
+    <div class="card-body">
+        <div class="card">
+            <h1><strong>Employee Salary </strong></h1>
+            <form>
+                <div class="form-row">
 
 
-                        <div class="form-group">
-                            <label for="inputSalaryDate">Salary Date</label>
-                            <input type="date" class="form-control" id="salary_date" name="salary_date" [(ngModel)]="salaryData.salary_date" #salary_date="ngModel" />
-                        </div>
-                        <div class="form-group">
-                            <label for="inputSalaryAmount">Salary Amount</label>
-                            <input type="text" class="form-control" id="salary_amount" name="salary_amount" [(ngModel)]="salaryData.salary_amount" #salary_amount="ngModel" />
-                        </div>
-                        <div class="form-group">
-                            <label for="inputEmployeeName">Employee Name </label>
-                            <input type="text" class="form-control" id="employee_name" name="employee_name" [(ngModel)]="salaryData.employee_name" #employee_name="ngModel" />
-                        </div>
-                        <div>
-                            <button type="submit" class="btn btn-primary" (click)="submit()">Submit</button>
-                        </div>
+                    <div class="form-group">
+                        <label for="inputSalaryDate">Salary Date</label>
+                        <input type="date" class="form-control" id="salary_date" name="salary_date" [(ngModel)]="salaryData.salary_date" #salary_date="ngModel" />
                     </div>
-                </form>
-            </div>
+                    <div class="form-group">
+                        <label for="inputSalaryAmount">Salary Amount</label>
+                        <input type="text" class="form-control" id="salary_amount" name="salary_amount" [(ngModel)]="salaryData.salary_amount" #salary_amount="ngModel" />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmployeeName">Employee Name </label>
+                        <input type="text" class="form-control" id="employee_name" name="employee_name" [(ngModel)]="salaryData.employee_name" #employee_name="ngModel" />
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary" (click)="submit()">Submit</button>
+                    </div>
+                </div>
+            </form>
         </div>
-        <script src="" async defer></script>
-    </body>
+    </div>
+    <script src="" async defer></script>
+</body>
 
 </html>
