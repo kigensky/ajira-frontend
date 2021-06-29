@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { EmployeeServiceService } from '../services/employee-service.service';
 
 @Component({
   selector: 'app-employee-salary',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeSalaryComponent implements OnInit {
 
-  constructor() { }
+  public employeeData: any = {
+    employee_name: '',
+    salary_date:'',
+    salary_amount: ''
+    
+  }
+
+  constructor( 
+    private router: Router,
+    private employeeService: EmployeeServiceService
+  ) { }
 
   ngOnInit(): void {
+    if(!this.employeeService.getToken()) {
+      this.router.navigate(["/login"])
+    }
   }
 
 }
