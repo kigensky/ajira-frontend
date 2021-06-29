@@ -15,8 +15,6 @@ export class LeaveFormComponent implements OnInit {
   public leaveData: any = {
     employee_name: '',
     department: '',
-    month: '',
-    year: '',
     Start_Date: '',
     End_Date: '',
     Reason: '',
@@ -45,6 +43,7 @@ export class LeaveFormComponent implements OnInit {
       console.log("data", data)
       if(data.data) {
         alert("Leave Days Added successfully")
+        this.router.navigate(["/leave-details"])
       } else {
         alert("Something went worng when creating the user")
       }
