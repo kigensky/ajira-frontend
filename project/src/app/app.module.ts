@@ -25,6 +25,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { EmployeeDetailsPageComponent } from './employee-details-page/employee-details-page.component';
 import { EmployeeSalaryDetailsComponent } from './employee-salary-details/employee-salary-details.component';
+import { LeaveDetailsPageComponent } from './leave-details-page/leave-details-page.component';
 
 
 @NgModule({
@@ -43,6 +44,8 @@ import { EmployeeSalaryDetailsComponent } from './employee-salary-details/employ
     EmployeeFormComponent,
     EmployeeDetailsPageComponent,
     EmployeeSalaryDetailsComponent,
+    LeaveDetailsPageComponent,
+    
     
     
   ],

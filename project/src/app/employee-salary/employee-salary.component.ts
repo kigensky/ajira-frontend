@@ -37,7 +37,7 @@ export class EmployeeSalaryComponent implements OnInit {
 
 }
 submit() { 
-  console.log("this.employeeData", this.salaryData)
+  console.log("this.salaryData", this.salaryData)
   let url= `${this.salaryService.getBaseURL()}api/employee_salary/`
   this.salaryService.loadPost(url, this.salaryData).then((data:any) => {
     console.log("data", data)
@@ -46,10 +46,10 @@ submit() {
     } else {
       alert("Something went wrong while adding salary")
     }
-   
   })
   
 }
 
 }
+
 

@@ -1,5 +1,5 @@
 <div class="employee-salary-details-container">
-    <h1>List of Employees</h1>
+    <h1>List of Salary</h1>
     <table class="employee-salary-details-table">
         <tr>
             <th>Salary Date</th>
@@ -7,7 +7,7 @@
             <th>Employee Name</th>
             <th></th>
         </tr>
-        <tr *ngFor="let item of salaryData; let i = index">
+        <tr *ngFor="let item of salaryData">
             <td>{{item.salary_date}}</td>
             <td>{{item.salary_amount}}</td>
             <td>{{item.employee_name}}</td>

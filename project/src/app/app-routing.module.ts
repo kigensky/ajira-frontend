@@ -1,3 +1,4 @@
+import { LeaveDetailsPageComponent } from './leave-details-page/leave-details-page.component';
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {HomeComponent} from './home/home.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: "post", component: PostComponent },
   { path: "employee-details-page", component: EmployeeDetailsPageComponent },
   { path: "employee-salary-details", component: EmployeeSalaryDetailsComponent },
+  { path: "leave-details", component: LeaveDetailsPageComponent },
 
 ];
 

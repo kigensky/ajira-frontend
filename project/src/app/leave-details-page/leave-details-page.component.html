@@ -1,0 +1,32 @@
+<div class="leave-details-container">
+    <h1>List of Leave Days</h1>
+    <table class="leave-details-table">
+        <tr>
+            <th>Employee Name</th>
+            <th>Department</th>
+            <th>Month</th>
+            <th>Year</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Reason</th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let item of leaveData; let i = index">
+            <td>{{item.employee_name}}</td>
+            <td>{{item.department}}</td>
+            <td>{{item.month}}</td>
+            <td>{{item.year}}</td>
+            <td>{{item.Start_Date}}</td>
+            <td>{{item.End_Date}}</td>
+            <td>{{item.Reason}}</td>
+            <td>
+                <button class="delete-leave-btn" (click)="deleteThisLeave(item.url)">Delete</button>
+            </td>
+            <td>
+                <button class="update-leave-btn" (click)="updateThisLeave(item.url)">Update</button>
+            </td>
+
+
+        </tr>
+    </table>
+</div>
