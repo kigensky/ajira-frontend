@@ -3,24 +3,6 @@
         <a routerLink="/" class="navbar-brand">Ajira-Enterprise</a>
 
         <div>
-            <ul class="navbar-nav me-auto mb-2 mb-md-0" *ngIf="!authenticated">
-                <li class="nav-item">
-                    <a routerLink="/login" class="nav-link">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a routerLink="/register" class="nav-link">Register</a>
-                </li>
-            </ul>
-
-            <ul class="navbar-nav me-auto mb-2 mb-md-0" *ngIf="authenticated">
-                <li class="nav-item">
-                    <a routerLink="/login" class="nav-link" (click)="logout()">Logout</a>
-                </li>
-            </ul>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
@@ -31,6 +13,24 @@
                     </li>
 
                 </ul>
+            <ul class="navbar-nav me-auto mb-2 mb-md-0" *ngIf="!authenticated">
+               <ul class="nav-item"> 
+                <li class="nav-item">
+                    <a routerLink="/login" class="nav-link">Login</a>
+                </li>
+               </ul>
+               <ul class="nav-item"> 
+                <li class="nav-item">
+                    <a routerLink="/register" class="nav-link">Register</a>
+                </li>
+               </ul> 
+            </ul>
+
+            <ul class="navbar-nav me-auto mb-2 mb-md-0" *ngIf="authenticated">
+                <li class="nav-item">
+                    <a routerLink="/login" class="nav-link" (click)="logout()">Logout</a>
+                </li>
+            </ul>
             </div>
         </div>
     </div>
