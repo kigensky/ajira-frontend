@@ -24,6 +24,7 @@ import { SignupComponent } from './signup/signup.component';
 import {HttpClientModule} from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { EmployeeDetailsPageComponent } from './employee-details-page/employee-details-page.component';
+import { EmployeeSalaryDetailsComponent } from './employee-salary-details/employee-salary-details.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { EmployeeDetailsPageComponent } from './employee-details-page/employee-d
     HomepageComponent,
     SignupComponent,
     EmployeeFormComponent,
-    EmployeeDetailsPageComponent
+    EmployeeDetailsPageComponent,
+    EmployeeSalaryDetailsComponent,
     
     
   ],

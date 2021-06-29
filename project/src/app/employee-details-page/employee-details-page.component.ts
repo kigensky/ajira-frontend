@@ -32,6 +32,7 @@ export class EmployeeDetailsPageComponent implements OnInit {
         // alert("Employee Created successfully")
       } else {
         alert("Login to view the employees")
+        // alert("Login to view the employees")
         this.router.navigate(["/login"])
       }
      

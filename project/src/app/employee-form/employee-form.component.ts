@@ -26,6 +26,8 @@ export class EmployeeFormComponent implements OnInit {
   constructor(
     
     
+    private formBuilder: FormBuilder,
+    private http: HttpClient,
     private router: Router,
     private employeeService: EmployeeServiceService
   ) { }

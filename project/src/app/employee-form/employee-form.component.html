@@ -17,8 +17,8 @@
 <body>
     <div class="card-body">
         <div class="card">
-            <h1><strong class="employee-form">Employee Form </strong></h1>
-            <form class="employee-frm">
+            <h1><strong>Employee Form </strong></h1>
+            <form>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="inputAddress">Employee Name</label>
@@ -36,15 +36,24 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="inputAddress2">Address </label>
-                        <input type="text" class="form-control" id="address" name="address" [(ngModel)]="employeeData.address" #address="ngModel" />
+                        <<<<<<< HEAD <label for="inputAddress2">Address </label>
+                            <input type="text" class="form-control" id="address" name="address" [(ngModel)]="employeeData.address" #address="ngModel" />
                     </div>
                     <div class="form-group">
                         <label for="inputAddress2">Status</label>
                         <input type="text" class="form-control" id="status" name="status" [(ngModel)]="employeeData.status" #status="ngModel" />
                     </div>
                     <div class="form-group">
-                        <label for="inputAddress2">Job Title</label>
+                        <label for="inputAddress2">Job Title</label> =======
+                        <label for="inputAddress">Address </label>
+                        <input type="text" class="form-control" id="address" name="address" [(ngModel)]="employeeData.address" #address="ngModel" />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputStatus">Status</label>
+                        <input type="text" class="form-control" id="status" name="status" [(ngModel)]="employeeData.status" #status="ngModel" />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputTitle">Job Title</label> >>>>>>> 8f8bc79f2d4ffa821bf1422c7d448ec879c6756a
                         <input type="text" class="form-control" id="job_title" name="job_title" [(ngModel)]="employeeData.job_title" #job_title="ngModel" />
                     </div>
                     <div>

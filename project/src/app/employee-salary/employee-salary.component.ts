@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { EmployeeServiceService } from '../services/employee-service.service';
 
@@ -8,23 +9,44 @@ import { EmployeeServiceService } from '../services/employee-service.service';
   styleUrls: ['./employee-salary.component.css']
 })
 export class EmployeeSalaryComponent implements OnInit {
-
-  public employeeData: any = {
-    employee_name: '',
+  form: FormGroup;
+  
+  public salaryData: any = {
     salary_date:'',
-    salary_amount: ''
-    
+    salary_amount:'',
+    employee_name:'',
   }
-
-  constructor( 
+  constructor(
+  
+    private formBuilder: FormBuilder,
+    private http: HttpClient,
     private router: Router,
-    private employeeService: EmployeeServiceService
+    private salaryService: SalaryService
+  
+  
   ) { }
 
   ngOnInit(): void {
-    if(!this.employeeService.getToken()) {
+    if(!this.salaryService.getToken()) {
       this.router.navigate(["/login"])
-    }
+  
   }
 
 }
+submit() { 
+  console.log("this.employeeData", this.salaryData)
+  let url= `${this.salaryService.getBaseURL()}api/employee_salary/`
+  this.salaryService.loadPost(url, this.salaryData).then((data:any) => {
+    console.log("data", data)
+    if(data.data) {
+      alert("Salary added successfully")
+    } else {
+      alert("Something went wrong while adding salary")
+    }
+   
+  })
+  
+}
+
+}
+
