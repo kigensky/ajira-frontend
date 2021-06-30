@@ -16,7 +16,7 @@
 
 <body>
     <div class="card-body">
-        <div class="card">
+        <div class="card" style="font-size: medium;">
             <h1><strong>Employee Form </strong></h1>
             <form>
                 <div class="form-row">
@@ -41,10 +41,16 @@
                     </div>
                     <div class="form-group">
                         <label for="inputAddress2">Status</label>
-                        <input type="text" class="form-control" id="status" name="status" [(ngModel)]="employeeData.status" #status="ngModel" />
+
+                        <select type="text" class="form-control" id="month" name="status" [(ngModel)]="employeeData.status" #status="ngModel">
+                            <option value="Paid">Paid</option>
+                            <option value="Not-Paid">Not-Paid</option>
+                        </select>
                     </div>
+
+
                     <div class="form-group">
-                        <label for="inputAddress2">Job Title</label>
+                        <label for="inputTitle">Job Title</label>
                         <input type="text" class="form-control" id="job_title" name="job_title" [(ngModel)]="employeeData.job_title" #job_title="ngModel" />
                     </div>
                     <div>
