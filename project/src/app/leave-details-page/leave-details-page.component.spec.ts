@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EmployeeSalaryComponent } from './employee-salary.component';
+import { LeaveDetailsPageComponent } from './leave-details-page.component';
 
-describe('EmployeeSalaryComponent', () => {
-  let component: EmployeeSalaryComponent;
-  let fixture: ComponentFixture<EmployeeSalaryComponent>;
+describe('LeaveDetailsPageComponent', () => {
+  let component: LeaveDetailsPageComponent;
+  let fixture: ComponentFixture<LeaveDetailsPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EmployeeSalaryComponent ]
+      declarations: [ LeaveDetailsPageComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EmployeeSalaryComponent);
+    fixture = TestBed.createComponent(LeaveDetailsPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -40,6 +40,7 @@ export class EmployeeFormComponent implements OnInit {
       // console.log("data", data)
       if(data.data) {
         alert("Employee Created successfully")
+        this.router.navigate(["/employee-details-page"])
       } else {
         alert("Something went worng when creating the user")
       }
