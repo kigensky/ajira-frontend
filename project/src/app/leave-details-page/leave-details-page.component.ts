@@ -34,8 +34,8 @@ export class LeaveDetailsPageComponent implements OnInit {
         this.leaveData = data.data;
         // alert("Leave Created successfully")
       } else {
-        alert("Login to view the leave days")
-        this.router.navigate(["/login"])
+        alert("No leave data available")
+        // this.router.navigate(["/login"])
       }
      
     })
@@ -48,8 +48,8 @@ export class LeaveDetailsPageComponent implements OnInit {
       }
     })
   }
-  deleteThisLeave(url:string) {
-    this.leaveService.loadDelete(url).then((data:any) => {
+  deleteThisLeave(id:Number) {
+    this.leaveService.loadDelete(id).then((data:any) => {
       // console.log("data", data)
       if(!data.error) {
         this.fetchLeaveData();

@@ -34,7 +34,9 @@
                     </div>
                     <div class="form-group">
                         <label for="inputEmployeeName">Employee Name </label>
-                        <input type="text" class="form-control" id="employee_name" name="employee_name" [(ngModel)]="salaryData.employee_name" #employee_name="ngModel" />
+                        <select class="form-control" id="employee_name" name="employee_name" [(ngModel)]="salaryData.employee_name" #employee_name="ngModel">
+                            <option *ngFor="let employee of employees; let i = index" [value]="employee.employee_name">{{employee.employee_name}} </option>
+                        </select>
                     </div>
                     <div>
                         <button type="submit" class="btn btn-primary" (click)="submit()">Submit</button>

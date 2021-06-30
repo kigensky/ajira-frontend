@@ -12,6 +12,7 @@ import { SalaryService } from '../services/salary.service';
 })
 export class EmployeeSalaryComponent implements OnInit {
   form: FormGroup;
+  public employees: any[] = []
   
   public salaryData: any = {
     salary_date:'',
@@ -23,7 +24,8 @@ export class EmployeeSalaryComponent implements OnInit {
     private formBuilder: FormBuilder,
     private http: HttpClient,
     private router: Router,
-    private salaryService: SalaryService
+    private salaryService: SalaryService,
+    private employeeService: EmployeeServiceService
   
   
   ) { }
@@ -31,9 +33,25 @@ export class EmployeeSalaryComponent implements OnInit {
   ngOnInit(): void {
     if(!this.salaryService.getToken()) {
       this.router.navigate(["/login"])
-  
+    
   }
+  this.getEmployees();
 
+}
+getEmployees() {
+  let url= `${this.employeeService.getBaseURL()}api/employee/`
+  this.employeeService.load(url).then((data:any) => {
+    console.log("data", data)
+    if(data.data) {
+      this.employees = data.data;
+      // alert("Employee Created successfully")
+    } else {
+      alert("Login to view the employees")
+      // alert("Login to view the employees")
+      this.router.navigate(["/login"])
+    }
+   
+  })
 }
 submit() { 
   console.log("this.employeeData", this.salaryData)

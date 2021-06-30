@@ -22,7 +22,9 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label for="inputAddress">Employee Name</label>
-                        <input type="text" class="form-control" id="employee_name" name="employee_name" [(ngModel)]="leaveData.employee_name" #employee_name="ngModel" />
+                        <select class="form-control" id="employee_name" name="employee_name" [(ngModel)]="leaveData.employee_name" #employee_name="ngModel">
+                            <option *ngFor="let employee of Employees; let i = index" [value]="employee.employee_name">{{employee.employee_name}} </option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="inputAddress2">Department </label>
@@ -34,19 +36,37 @@
                     </div>
                     <div class="form-group">
                         <label for="inputAddress2">Month </label>
-                        <input type="text" class="form-control" id="month" name="month" [(ngModel)]="leaveData.month" #month="ngModel" />
+
+                        <select type="text" class="form-control" id="month" name="month" [(ngModel)]="leaveData.month" #month="ngModel">
+                        
+                            <option value="January">January</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">October</option>
+                            <option value="November">November</option>
+                            <option value="december">December</option>
+                          </select>
                     </div>
                     <div class="form-group">
                         <label for="inputAddress2">Year</label>
-                        <input type="text" class="form-control" id="year" name="year" [(ngModel)]="leaveData.year" #year="ngModel" />
+
+                        <select type="text" class="form-control" id="year" name="year" [(ngModel)]="leaveData.year" #year="ngModel">
+                            <option value="2021">2021</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="inputAddress2">Start Date</label>
-                        <input type="text" class="form-control" id="Start_Date" name="Start_Date" [(ngModel)]="leaveData.Start_Date" #Start_Date="ngModel" />
+                        <input type="date" class="form-control" id="Start_Date" name="Start_Date" [(ngModel)]="leaveData.Start_Date" #Start_Date="ngModel" />
                     </div>
                     <div class="form-group">
                         <label for="inputAddress2">End Date</label>
-                        <input type="text" class="form-control" id="End_Date" name="End_Date" [(ngModel)]="leaveData.End_Date" #End_Date="ngModel" />
+                        <input type="date" class="form-control" id="End_Date" name="End_Date" [(ngModel)]="leaveData.End_Date" #End_Date="ngModel" />
                     </div>
                     <div class="form-group">
                         <label for="inputAddress2">Reason</label>
