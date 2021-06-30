@@ -1,57 +1,229 @@
+ 
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-
-
-
-
-const baseUrl ='http://127.0.0.1:8000/leave/'
+import { HttpClient, HttpHeaders, HttpResponse } from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
 })
 export class LeaveServiceService {
-  
+  data:any
+  constructor(
+    public http:HttpClient
+  ) { }
 
-  constructor(private http:HttpClient) { }
-  
-  getLeaveData(id: any): Observable<any> {
-    return this.http.get(`${baseUrl}/${id}`);
+  getToken(){
+    return JSON.parse(localStorage.getItem("ajira-tkn"))
+  }
+  removeToken() {
+    localStorage.removeItem("ajira-tkn")
+  }
+  getBaseURL() {
+    return "http://127.0.0.1:8000/"
   }
 
-  getLeaveDetail(id: any) {
-    return this.http.get(`${baseUrl}/${id}`);
+  load(url) {
+    return new Promise((resolve) => {
+      if (this.getToken()) {
+        this.http
+          .get(url, {
+            headers: new HttpHeaders({
+              "Content-Type": "application/json",
+              Authorization: "Bearer " + this.getToken(),
+            }),
+          })
+          .subscribe(
+            (data) => {
+              this.data = data;
+              resolve({ data: this.data, error: "" });
+            },
+            (err) => {
+              console.log(err);
+              resolve({ data: "", error: err });
+            }
+          );
+      } else {
+        this.http.get(url).subscribe(
+          (data) => {
+            this.data = data;
+            resolve({ data: this.data, error: "" });
+          },
+          (err) => {
+            console.log(err);
+            resolve({ data: "", error: err });
+          }
+        );
+      }
+    });
   }
 
-  addLeave(data:{
-    employee_name:string;
-    department:string;
-    month :string;
-    year: number;
-    Start_Date: number;
-    End_Date: number;
-    Reason: string;
-
-  }){
-    return this.http.post(baseUrl, data)
-  }
-
-  updateLeave(
-    id: any,
-    data: {
-      department:string;
-      month :string;
-      year: number;
-      Start_Date: number;
-      End_Date: number;
-      Reason: string;
+  /**
+   * This method loadPost sends a POST request and returns the promise result
+   *
+   * @method loadPost
+   * @param {String} url the api url for the resource being requested
+   * @param {Object} body the payload object need for the post request
+   * @param {boolean} observable boolean to determine behaviour
+   * @return {Promise} $http Promise object containing response data
+   */
+   loadPost(url, body, observable = false) {
+    const headers = new HttpHeaders({
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + this.getToken(),
+    });
+    if (!observable) {
+      return new Promise((resolve) => {
+        if (this.getToken()) {
+          this.http.post(url, body, { headers: headers }).subscribe(
+            (data) => {
+              this.data = data;
+              resolve({ data: this.data, error: "" });
+            },
+            (err) => {
+              console.log(err);
+              resolve({ data: "", error: err });
+            }
+          );
+        } else {
+          this.http.post(url, body).subscribe(
+            (data) => {
+              this.data = data;
+              resolve({ data: this.data, error: "" });
+            },
+            (err) => {
+              console.log(err);
+              resolve({ data: "", error: err });
+            }
+          );
+        }
+      });
     }
-  ) {
-    return this.http.put(`${baseUrl}/${id}`, data);
   }
 
-  deleteLeave(id: any) {
-    return this.http.delete(`${baseUrl}/${id}`);
+  /**
+   * This method loadDelete sends a DELETE request and returns the promise result
+   *
+   * @method loadDelete
+   * @param {String} url the api url for the resource being requested
+   * @return {Promise} $http Promise object containing response data
+   */
+  loadDelete(url) {
+    return new Promise((resolve) => {
+      if (this.getToken()) {
+        this.http
+          .delete(url, {
+            headers: new HttpHeaders({
+              "Content-Type": "application/json",
+              Authorization: "Bearer " + this.getToken(),
+            }),
+          })
+          .subscribe(
+            (data) => {
+              this.data = data;
+              resolve({ data: this.data, error: "" });
+            },
+            (err) => {
+              console.log(err);
+              resolve({ data: "", error: err });
+            }
+          );
+      } else {
+        this.http.delete(url).subscribe(
+          (data) => {
+            this.data = data;
+            resolve({ data: this.data, error: "" });
+          },
+          (err) => {
+            console.log(err);
+            resolve({ data: "", error: err });
+          }
+        );
+      }
+    });
   }
 
+  /**
+   * This method loadPut sends a PUT request and returns the promise result
+   *
+   * @method loadPut
+   * @param {String} url the api url for the resource being requested
+   * @param {Object} body the payload object need for the PUT request
+   * @return {Promise} $http Promise object containing response data
+   */
+  loadPut(url, body) {
+    return new Promise((resolve) => {
+      if (this.getToken()) {
+        this.http
+          .put(url, body, {
+            headers: new HttpHeaders({
+              "Content-Type": "application/json",
+              Authorization: "Bearer " + this.getToken(),
+            }),
+          })
+          .subscribe(
+            (data) => {
+              this.data = data;
+              resolve({ data: this.data, error: "" });
+            },
+            (err) => {
+              console.log(err);
+              resolve({ data: "", error: err });
+            }
+          );
+      } else {
+        this.http.put(url, body).subscribe(
+          (data) => {
+            this.data = data;
+            resolve({ data: this.data, error: "" });
+          },
+          (err) => {
+            console.log(err);
+            resolve({ data: "", error: err });
+          }
+        );
+      }
+    });
+  }
+
+  /**
+   * This method loadPatch sends a PATCH request and returns the promise result
+   *
+   * @method loadPatch
+   * @param {String} url the api url for the resource being requested
+   * @param {Object} body the payload object need for the PATCH request
+   * @return {Promise} $http Promise object containing response data
+   */
+  loadPatch(url, body) {
+    return new Promise((resolve) => {
+      if (this.getToken()) {
+        this.http
+          .patch(url, body, {
+            headers: new HttpHeaders({
+              "Content-Type": "application/json",
+              Authorization: "Bearer " + this.getToken(),
+            }),
+          })
+          .subscribe(
+            (data) => {
+              this.data = data;
+              resolve({ data: this.data, error: "" });
+            },
+            (err) => {
+              console.log(err);
+              resolve({ data: "", error: err });
+            }
+          );
+      } else {
+        this.http.patch(url, body).subscribe(
+          (data) => {
+            this.data = data;
+            resolve({ data: this.data, error: "" });
+          },
+          (err) => {
+            console.log(err);
+            resolve({ data: "", error: err });
+          }
+        );
+      }
+    });
+  }
 }

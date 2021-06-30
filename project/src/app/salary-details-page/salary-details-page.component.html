@@ -1,1 +1,24 @@
+<div class="employee-salary-details-container">
+  <h1>List of Employees</h1>
+  <table class="employee-salary-details-table">
+      <tr>
+          <th>Salary Date</th>
+          <th>Salary Amount</th>
+          <th>Employee Name</th>
+          <th></th>
+      </tr>
+      <tr *ngFor="let item of salaryData; let i = index">
+          <td>{{item.salary_date}}</td>
+          <td>{{item.salary_amount}}</td>
+          <td>{{item.employee_name}}</td>
+          <td>
+              <button class="delete-salary-btn" (click)="deleteThisSalary(item.url)">Delete</button>
+          </td>
+          <td>
+              <button class="update-salary-btn" (click)="updateThisSalary(item.url)">Update</button>
+          </td>
 
+
+      </tr>
+  </table>
+</div>

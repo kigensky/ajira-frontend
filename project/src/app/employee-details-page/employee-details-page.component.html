@@ -1,0 +1,25 @@
+<div class="employee-details-container">
+    <h1>List of Employees</h1>
+    <table class="employee-details-table">
+        <tr>
+            <th>Employee Name</th>
+            <th>Department</th>
+            <th>Address</th>
+            <th>Status</th>
+            <th>Job Title</th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let item of employeeData; let i = index">
+            <td>{{item.employee_name}}</td>
+            <td>{{item.department}}</td>
+            <td>{{item.address}}</td>
+            <td>{{item.status}}</td>
+            <td>{{item.job_title}}</td>
+            <td>
+                <button class="delete-employee-btn" (click)="deleteThisEmployee(item.url)">Delete</button>
+            </td>
+
+
+        </tr>
+    </table>
+</div>
