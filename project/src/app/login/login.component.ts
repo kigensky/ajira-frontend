@@ -27,15 +27,15 @@ export class LoginComponent implements OnInit {
 
   submit(): void {
     console.log("this.form.getRawValue()", this.form.getRawValue())
-    this.http.post('http://localhost:8000/api/login', this.form.getRawValue(), {
+    this.http.post('http://127.0.0.1:8000/api/login', this.form.getRawValue(), {
       withCredentials: true
     }).subscribe((data:any) => { 
-      // console.log("data", data)
+      console.log("data", data)
       // this.router.navigate(['/']) }
       if ((data) && (data.jwt)) {
         localStorage.setItem("ajira-tkn", JSON.stringify(data.jwt))
         this.router.navigate(['/']) 
-        
+        alert("login successfull")
       }else{
         alert("Invalid credentials")
       }

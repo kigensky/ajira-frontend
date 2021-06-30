@@ -38,14 +38,6 @@ export class EmployeeDetailsPageComponent implements OnInit {
     })
     
   }
-  UpdateThisEmployee(url:string) {
-    this.employeeService.loadPut(url, body).then((data:any) => {
-      // console.log("data", data)
-      if(!data.error) {
-        this.fetchEmployeeData();
-      }
-    })
-  }
   deleteThisEmployee(url:string) {
     this.employeeService.loadDelete(url).then((data:any) => {
       // console.log("data", data)

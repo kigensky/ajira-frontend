@@ -48,7 +48,7 @@ body {
     flex-direction: column;
     min-width: 0px;
     word-wrap: break-word;
-    background-color: #05050521;
+    background-color: #05050541;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 1.25rem;
@@ -91,8 +91,8 @@ body[_ngcontent-eov-c56] {
     background-color: #C52323;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=889&q=80);height: 1000px;
-    height: 600px;
+    background-image: url(https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=889&q=80);height: 1100px;
+    height: 805px;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
     background-position: center center;
@@ -102,4 +102,5 @@ body[_ngcontent-eov-c56] {
 .h1, h1 {
     font-size: 4.5rem;
     color: #ffffff;
+    
 }

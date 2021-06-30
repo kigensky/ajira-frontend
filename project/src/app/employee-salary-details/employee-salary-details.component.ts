@@ -37,17 +37,8 @@ export class EmployeeSalaryDetailsComponent implements OnInit {
         alert("Login to view the leave days")
         this.router.navigate(["/login"])
       }
-     
     })
   } 
-  UpdateThisSalary(url:string) {
-    this.salaryService.loadPut(url, body).then((data:any) => {
-      // console.log("data", data)
-      if(!data.error) {
-        this.fetchSalaryData();
-      }
-    })
-  }
   deleteThisSalary(url:string) {
     this.salaryService.loadDelete(url).then((data:any) => {
       // console.log("data", data)

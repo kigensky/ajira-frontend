@@ -2,11 +2,13 @@
     <h1>Please sign in</h1>
     <form [formGroup]="form" (submit)="submit()">
         <div class="form-group">
-
+            <label for="password">Email</label>
             <input formControlName="email" type="email" class="login form-control" placeholder="Email" required>
-
-            <input formControlName="password" type="password" class="login form-control" placeholder="Password" required>
-
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input formControlName="password" type="password" class="login form-control" placeholder="Password" required>
+            </div>
+            <br>
             <button class="login btn btn-lg btn-primary" type="submit">Sign in</button>
             <br>
             <p>Dont have an account signup <a href="register">here</a> </p>
