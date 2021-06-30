@@ -4,7 +4,7 @@ element.style {
 
 .form-control {
     display: block;
-    width: 100%;
+    width: 127%;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     padding-left: 50px;
@@ -35,10 +35,10 @@ element.style {
     flex: 13 22auto;
     padding: 4rem 30rem;
     align-items: center;
-    background-image: url(https://images.unsplash.com/photo-1564540574859-0dfb63985953?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80);
+    background-image: url(https://images.unsplash.com/photo-1593642532842-98d0fd5ebc1a?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80);
     height: 800px;
     background-size: cover;
-    color: rgb(3, 3, 3);
+    color: black;
 }
 
 body {
@@ -61,7 +61,7 @@ body {
     min-width: 60px;
     padding-right: 200px;
     word-wrap: break-word;
-    background-color: #0202027a;
+    background-color: #fffefe91;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
@@ -71,7 +71,7 @@ body {
 
 label {
     align-items: center;
-    color: #fff;
+    color: black;
     margin-left: 50px;
 }
 
@@ -126,7 +126,7 @@ h1,
     min-width: 60px;
     padding-right: 200px;
     word-wrap: break-word;
-    background-color: #0202027a;
+    background-color: #f8f5f575;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
@@ -134,41 +134,7 @@ h1,
     margin-top: 20px;
 }
 
-.card[_ngcontent-oev-c54] {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 60px;
-    padding-right: 200px;
-    word-wrap: break-word;
-    background-color: #0202027a;
-    background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.25rem;
-    height: 80%;
-    margin-top: 10px;
-    font-size: larger;
-}
-
-.employee-form {
-    font-size: large;
-}
-
-.card-body[_ngcontent-fbm-c54] {
-    flex: 13 22auto;
-    padding: 4rem 30rem;
-    align-items: center;
-    background-image: url(https://images.unsplash.com/photo-1564540574859-0dfb63985953?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80);
-    height: 800px;
-    background-size: cover;
-    color: rgb(3, 3, 3);
-    font-size: large;
-}
-
-.employee-frm {
-    font-size: large;
-}
-
-.form-control {
-    font-size: large;
+h2[_ngcontent-uqu-c61] {
+    font-family: 'Pacifico', cursive;
+    margin-top: inherit;
 }
