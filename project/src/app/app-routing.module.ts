@@ -21,7 +21,8 @@ const routes: Routes = [
   { path: "post", component: PostComponent },
   { path: "employee-details-page", component: EmployeeDetailsPageComponent },
   { path: "employee-salary-details", component: EmployeeSalaryDetailsComponent },
-  {path : "leave-details-page", component: LeaveDetailsPageComponent}
+  {path : "leave-details-page", component: LeaveDetailsPageComponent},
+  { path: "employee-salary", component: EmployeeSalaryComponent },
 
 ];
 
