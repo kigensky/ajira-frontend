@@ -3,7 +3,6 @@ import { EmployeeSalaryFormComponent } from './employee-salary-form/employee-sal
 import { LeaveDetailsPageComponent } from './leave-details-page/leave-details-page.component';
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {HomeComponent} from './home/home.component';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
@@ -15,9 +14,8 @@ import { EmployeeDetailsPageComponent } from './employee-details-page/employee-d
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
-  {path: '', component: HomeComponent},
   {path: 'register', component: RegisterComponent},
-  { path: "homepage", component: HomepageComponent },
+  { path: "", component: HomepageComponent },
   { path: "employee-form", component: EmployeeFormComponent },
   { path: "employee-salary-form", component: EmployeeSalaryFormComponent },
   { path: "leave-form", component: LeaveFormComponent },

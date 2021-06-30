@@ -32,7 +32,7 @@ element.style {
     flex: 13 22auto;
     padding: 4rem 30rem;
     align-items: center;
-    background-image: url(https://images.unsplash.com/photo-1564540574859-0dfb63985953?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80);height: 800px;
+    background-image: url(https://images.unsplash.com/photo-1593642532842-98d0fd5ebc1a?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80);height: 800px;
     background-size: cover;
     color: rgb(3, 3, 3);
 }
@@ -55,16 +55,16 @@ body {
     min-width: 60px;
     padding-right: 200px;
     word-wrap: break-word;
-    background-color: #0202027a;
+    background-color: #ffffff85;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
-    height: 65%;
+    height: 58%;
     margin-top: 10px;
 }
 label {
     align-items: center;
-    color: #fff;
+    color: rgb(3, 3, 3);
     margin-left: 50px;
 }
 .btn {

@@ -5,7 +5,6 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {RegisterComponent} from './register/register.component';
 import {LoginComponent} from './login/login.component';
-import {HomeComponent} from './home/home.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
@@ -30,7 +29,6 @@ import { EmployeeSalaryDetailsComponent } from './employee-salary-details/employ
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    HomeComponent,
     NavbarComponent,
     LeaveFormComponent,
     PostComponent,
