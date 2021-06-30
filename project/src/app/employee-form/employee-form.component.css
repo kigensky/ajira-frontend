@@ -133,3 +133,8 @@ h1,
     height: 80%;
     margin-top: 20px;
 }
+
+h2[_ngcontent-uqu-c61] {
+    font-family: 'Pacifico', cursive;
+    margin-top: inherit;
+}

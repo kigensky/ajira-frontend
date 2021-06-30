@@ -17,7 +17,7 @@ export class EmployeeServiceService {
     localStorage.removeItem("ajira-tkn")
   }
   getBaseURL() {
-    return "http://127.0.0.1:8000/"
+    return "https://ajira-enterprise.herokuapp.com/"
   }
 
   load(url) {
@@ -105,11 +105,11 @@ export class EmployeeServiceService {
    * @param {String} url the api url for the resource being requested
    * @return {Promise} $http Promise object containing response data
    */
-  loadDelete(url) {
+  loadDelete(id:Number) {
     return new Promise((resolve) => {
       if (this.getToken()) {
         this.http
-          .delete(url, {
+          .delete(this.getBaseURL() + "api/employee/" + id, {
             headers: new HttpHeaders({
               "Content-Type": "application/json",
               Authorization: "Bearer " + this.getToken(),
@@ -126,7 +126,7 @@ export class EmployeeServiceService {
             }
           );
       } else {
-        this.http.delete(url).subscribe(
+        this.http.delete(this.getBaseURL() + "api/employee/" + id).subscribe(
           (data) => {
             this.data = data;
             resolve({ data: this.data, error: "" });

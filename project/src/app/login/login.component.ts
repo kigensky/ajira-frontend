@@ -9,8 +9,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  form: FormGroup;
-
+  form: FormGroup
   constructor(
     private formBuilder: FormBuilder,
     private http: HttpClient,
@@ -26,8 +25,8 @@ export class LoginComponent implements OnInit {
   }
 
   submit(): void {
-    // console.log("this.form.getRawValue()", this.form.getRawValue())
-    this.http.post('http://localhost:8000/api/login', this.form.getRawValue(), {
+    console.log("this.form.getRawValue()", this.form.getRawValue())
+    this.http.post('https://ajira-enterprise.herokuapp.com/api/login', this.form.getRawValue(), {
       withCredentials: true
     }).subscribe((data:any) => { 
       // console.log("data", data)

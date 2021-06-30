@@ -1,3 +1,4 @@
+
 import { EmployeeSalaryDetailsComponent } from './employee-salary-details/employee-salary-details.component';
 import { EmployeeSalaryFormComponent } from './employee-salary-form/employee-salary-form.component';
 import { LeaveDetailsPageComponent } from './leave-details-page/leave-details-page.component';
@@ -9,9 +10,9 @@ import { EmployeeFormComponent } from './employee-form/employee-form.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LeaveFormComponent } from './leave-form/leave-form.component';
 import { PostComponent } from './post/post.component';
+import { EmployeeSalaryComponent} from './employee-salary/employee-salary.component'
 import { EmployeeDetailsPageComponent } from './employee-details-page/employee-details-page.component';
-
-
+import { from } from 'rxjs';
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
@@ -21,8 +22,9 @@ const routes: Routes = [
   { path: "leave-form", component: LeaveFormComponent },
   { path: "post", component: PostComponent },
   { path: "employee-details-page", component: EmployeeDetailsPageComponent },
-  { path: "leave-details", component: LeaveDetailsPageComponent },
-  { path: "employee-salary-details", component: EmployeeSalaryDetailsComponent}
+  { path: "employee-salary-details", component: EmployeeSalaryDetailsComponent },
+  {path : "leave-details-page", component: LeaveDetailsPageComponent},
+  { path: "employee-salary" , component: EmployeeSalaryComponent}
 
 ];
 

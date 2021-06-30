@@ -8,6 +8,7 @@ import { EmployeeServiceService } from '../services/employee-service.service';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
+  authenticated = false;
 
   constructor(
     private router: Router,
@@ -15,9 +16,22 @@ export class PostComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    if(!this.employeeService.getToken()) {
-      this.router.navigate(["/login"])
+    if(this.employeeService.getToken()) {
+      this.authenticated = true; 
     }
+    console.log("this.authenticated", this.authenticated)
+    // Emitters.authEmitter.subscribe(
+    //   (auth: boolean) => {
+    //     this.authenticated = auth;
+    //   }
+    // );
+  }
+
+  logout(): void {
+    this.employeeService.removeToken();
+    this.router.navigate(["/login"]);
+    // this.http.post('http://localhost:8000/api/logout', {}, {withCredentials: true})
+    //   .subscribe(() => this.authenticated = false);
   }
 
 }
