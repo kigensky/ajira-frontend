@@ -1,15 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpResponse } from "@angular/common/http";
-
 @Injectable({
   providedIn: 'root'
 })
-export class LeaveService {
+export class SalaryService {
   data:any
   constructor(
     public http:HttpClient
   ) { }
-
   getToken(){
     return JSON.parse(localStorage.getItem("ajira-tkn"))
   }
@@ -17,9 +15,8 @@ export class LeaveService {
     localStorage.removeItem("ajira-tkn")
   }
   getBaseURL() {
-    return "http://127.0.0.1:8000/"
+    return "https://ajira-enterprise.herokuapp.com/"
   }
-
   load(url) {
     return new Promise((resolve) => {
       if (this.getToken()) {
@@ -54,7 +51,6 @@ export class LeaveService {
       }
     });
   }
-
   /**
    * This method loadPost sends a POST request and returns the promise result
    *
@@ -97,7 +93,6 @@ export class LeaveService {
       });
     }
   }
-
   /**
    * This method loadDelete sends a DELETE request and returns the promise result
    *
@@ -105,11 +100,13 @@ export class LeaveService {
    * @param {String} url the api url for the resource being requested
    * @return {Promise} $http Promise object containing response data
    */
-  loadDelete(url) {
+  loadDelete(id:Number) {
+    
+    let deleteurl = this.getBaseURL() + "api/employee_salary/" + id
     return new Promise((resolve) => {
       if (this.getToken()) {
         this.http
-          .delete(url, {
+          .delete(deleteurl, {
             headers: new HttpHeaders({
               "Content-Type": "application/json",
               Authorization: "Bearer " + this.getToken(),
@@ -126,7 +123,7 @@ export class LeaveService {
             }
           );
       } else {
-        this.http.delete(url).subscribe(
+        this.http.delete(deleteurl).subscribe(
           (data) => {
             this.data = data;
             resolve({ data: this.data, error: "" });
@@ -139,7 +136,6 @@ export class LeaveService {
       }
     });
   }
-
   /**
    * This method loadPut sends a PUT request and returns the promise result
    *
@@ -182,7 +178,6 @@ export class LeaveService {
       }
     });
   }
-
   /**
    * This method loadPatch sends a PATCH request and returns the promise result
    *

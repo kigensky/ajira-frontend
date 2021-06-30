@@ -1,3 +1,39 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+body{
+    margin: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+@media screen and (min-width:768px) {
+    .navbar-br {
+      position: absolute;
+      left: 50%;
+      display: block;
+      width: 160px;
+      text-align: center;
+      background-color: #eee;
+    }
+  
+    .navbar>.container .navbar-brand-centered,
+    .navbar>.container-fluid .navbar-brand-centered {
+      margin-left: -80px;
+    }
+  }
+  
+  @media only screen and (max-width: 766px) {
+    .navbar-center {
+      display: none;
+    }
+    .title {
+      display: none;
+    }
+    .navbar-form {
+      display: none;
+    }
+    .card-custom-avatar {
+      display: none;
+    }
+  }

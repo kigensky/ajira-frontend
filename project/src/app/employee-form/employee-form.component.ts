@@ -24,6 +24,8 @@ export class EmployeeFormComponent implements OnInit {
 
 
   constructor(
+    
+    
     private formBuilder: FormBuilder,
     private http: HttpClient,
     private router: Router,
@@ -36,10 +38,10 @@ export class EmployeeFormComponent implements OnInit {
     }
   }
   submit() { 
-    console.log("this.employeeData", this.employeeData)
+    // console.log("this.employeeData", this.employeeData)
     let url= `${this.employeeService.getBaseURL()}api/employee/`
     this.employeeService.loadPost(url, this.employeeData).then((data:any) => {
-      console.log("data", data)
+      // console.log("data", data)
       if(data.data) {
         alert("Employee Created successfully")
         this.router.navigate(["/employee-details-page"])

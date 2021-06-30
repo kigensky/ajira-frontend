@@ -26,20 +26,22 @@ export class EmployeeDetailsPageComponent implements OnInit {
   fetchEmployeeData() { 
     let url= `${this.employeeService.getBaseURL()}api/employee/`
     this.employeeService.load(url).then((data:any) => {
-      // console.log("data", data)
+      console.log("data", data)
       if(data.data) {
         this.employeeData = data.data;
         // alert("Employee Created successfully")
       } else {
         alert("Login to view the employees")
+        // alert("Login to view the employees")
         this.router.navigate(["/login"])
       }
      
     })
     
   }
-  deleteThisEmployee(url:string) {
-    this.employeeService.loadDelete(url).then((data:any) => {
+  
+  deleteThisEmployee(id:Number) {
+    this.employeeService.loadDelete(id).then((data:any) => {
       // console.log("data", data)
       if(!data.error) {
         this.fetchEmployeeData();
@@ -48,7 +50,3 @@ export class EmployeeDetailsPageComponent implements OnInit {
   }
 
 }
-function body(url: string, body: any) {
-  throw new Error('Function not implemented.');
-}
-

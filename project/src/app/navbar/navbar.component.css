@@ -1,15 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-.nav-link{
+.nav-link {
     color: white !important;
 }
 
-.nav-link{
+.nav-link {
     cursor: pointer;
 }
 
-nav{
-    background-image: linear-gradient(to right,#152ae7, #03286b );
+nav {
+    background-image: linear-gradient(to right, #152ae7, #a536ff);
 }
-h2{
-    font-family: 'Pacifico', cursive;;
+
+h2 {
+    font-family: 'Pacifico', cursive;
+    ;
+}
+
+element {
+    margin-top: auto;
 }

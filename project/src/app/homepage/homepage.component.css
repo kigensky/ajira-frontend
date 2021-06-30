@@ -58,9 +58,6 @@ body {
     background: cover;
 }
 
-.text-primary {
-    color: #020202 !important;
-}
 .btn {
     display: inline-block;
     font-weight: 400;
@@ -78,7 +75,7 @@ body {
     padding: .375rem .75rem;
     font-size: 1rem;
     border-radius: 1.25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 body[_ngcontent-eov-c56] {
@@ -91,7 +88,8 @@ body[_ngcontent-eov-c56] {
     background-color: #C52323;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=889&q=80);height: 1100px;
+    background-image: url(https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=889&q=80);
+    height: 1100px;
     height: 805px;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
@@ -99,8 +97,12 @@ body[_ngcontent-eov-c56] {
     box-sizing: border-box;
 }
 
-.h1, h1 {
+.h1,
+h1 {
     font-size: 4.5rem;
     color: #ffffff;
-    
+}
+
+.text-primary {
+    color: white !important;
 }

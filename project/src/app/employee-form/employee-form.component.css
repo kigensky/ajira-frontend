@@ -22,6 +22,7 @@ element.style {
     margin-left: 50px;
     border-radius: 0.25rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    font-size: medium;
 }
 
 .btn-primary {
@@ -38,6 +39,7 @@ element.style {
     background-image: url(https://images.unsplash.com/photo-1593642532842-98d0fd5ebc1a?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80);
     height: 800px;
     background-size: cover;
+    object-fit: cover;
     color: black;
 }
 
@@ -132,4 +134,9 @@ h1,
     border-radius: 0.25rem;
     height: 80%;
     margin-top: 20px;
+}
+
+h2[_ngcontent-uqu-c61] {
+    font-family: 'Pacifico', cursive;
+    margin-top: inherit;
 }
