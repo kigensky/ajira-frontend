@@ -101,6 +101,7 @@ export class SalaryService {
    * @return {Promise} $http Promise object containing response data
    */
   loadDelete(id:Number) {
+    
     let deleteurl = this.getBaseURL() + "api/employee_salary/" + id
     return new Promise((resolve) => {
       if (this.getToken()) {

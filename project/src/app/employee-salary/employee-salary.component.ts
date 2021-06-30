@@ -1,9 +1,9 @@
-import { SalaryService } from './../services/salary.service.spec';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { EmployeeServiceService } from '../services/employee-service.service';
+import { SalaryService } from '../services/salary.service';
 
 @Component({
   selector: 'app-employee-salary',
@@ -13,6 +13,7 @@ import { EmployeeServiceService } from '../services/employee-service.service';
 export class EmployeeSalaryComponent implements OnInit {
   form: FormGroup;
   public employees: any[] = []
+  
   public salaryData: any = {
     salary_date:'',
     salary_amount:'',
@@ -24,12 +25,16 @@ export class EmployeeSalaryComponent implements OnInit {
     private router: Router,
     private salaryService: SalaryService,
     private employeeService: EmployeeServiceService
+  
+  
   ) { }
   ngOnInit(): void {
     if(!this.salaryService.getToken()) {
       this.router.navigate(["/login"])
+    
   }
   this.getEmployees();
+
 }
 getEmployees() {
   let url= `${this.employeeService.getBaseURL()}api/employee/`
@@ -43,6 +48,7 @@ getEmployees() {
       // alert("Login to view the employees")
       this.router.navigate(["/login"])
     }
+   
   })
 }
 submit() { 
@@ -56,5 +62,8 @@ submit() {
       alert("Something went wrong while adding salary")
     }
   })
+  
 }
+
 }
+

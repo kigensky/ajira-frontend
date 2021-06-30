@@ -4,8 +4,6 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {RegisterComponent} from './register/register.component';
 import {LoginComponent} from './login/login.component';
-import {HomeComponent} from './home/home.component';
-import {NavComponent} from './nav/nav.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -19,14 +17,14 @@ import { CommonModule } from '@angular/common';
 import { EmployeeDetailsPageComponent } from './employee-details-page/employee-details-page.component';
 import { EmployeeSalaryDetailsComponent } from './employee-salary-details/employee-salary-details.component';
 import { LeaveDetailsPageComponent } from './leave-details-page/leave-details-page.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    HomeComponent,
     NavbarComponent,
-    NavComponent,
     LeaveFormComponent,
     EmployeeSalaryComponent,
     PostComponent,
@@ -36,6 +34,8 @@ import { LeaveDetailsPageComponent } from './leave-details-page/leave-details-pa
     EmployeeDetailsPageComponent,
     EmployeeSalaryDetailsComponent,
     LeaveDetailsPageComponent,
+    
+    
   ],
   imports: [
     BrowserModule,

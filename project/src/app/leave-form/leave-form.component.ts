@@ -61,4 +61,8 @@ export class LeaveFormComponent implements OnInit {
       }
     })
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> a091e2c60fb15e58f7c18168a715604095262b07

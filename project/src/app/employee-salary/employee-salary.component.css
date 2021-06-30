@@ -1,6 +1,7 @@
 element.style {
     width: 25px;
 }
+
 .form-control {
     display: block;
     width: 129%;
@@ -23,12 +24,14 @@ element.style {
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     font-size: medium;
 }
+
 .btn-primary {
     color: #fff;
     background-color: #0D6EFD;
     border-color: #0D6EFD;
     align-items: center;
 }
+
 .card-body {
     flex: 13 22auto;
     padding: 4rem 30rem;
@@ -38,6 +41,7 @@ element.style {
     background-size: cover;
     color: rgb(3, 3, 3);
 }
+
 body {
     margin: 0;
     font-family: var(--bs-font-sans-serif);
@@ -50,6 +54,7 @@ body {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     background-size: cover;
 }
+
 .card {
     position: relative;
     display: flex;
@@ -64,11 +69,13 @@ body {
     height: 58%;
     margin-top: 10px;
 }
+
 label {
     align-items: center;
     color: rgb(3, 3, 3);
     margin-left: 50px;
 }
+
 .btn {
     display: inline-block;
     font-weight: 400;
@@ -99,15 +106,18 @@ strong {
 *::after {
     box-sizing: border-box;
 }
+
 user agent stylesheet strong {
     font-weight: bold;
 }
+
 h1,
 .h1 {
     font-size: 2.5rem;
     margin-left: 50px;
     padding-top: 20px;
 }
+
 .card[_ngcontent-ivi-c17] {
     position: relative;
     display: flex;
