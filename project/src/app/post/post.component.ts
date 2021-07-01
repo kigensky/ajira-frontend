@@ -30,6 +30,7 @@ export class PostComponent implements OnInit {
   logout(): void {
     this.employeeService.removeToken();
     this.router.navigate(["/login"]);
+    
     // this.http.post('http://localhost:8000/api/logout', {}, {withCredentials: true})
     //   .subscribe(() => this.authenticated = false);
   }
