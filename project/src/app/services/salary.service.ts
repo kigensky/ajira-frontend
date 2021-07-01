@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders, HttpResponse } from "@angular/common/http";
 @Injectable({
   providedIn: 'root'
 })
-export class EmployeeServiceService {
+export class LeaveService {
   data:any
   constructor(
     public http:HttpClient

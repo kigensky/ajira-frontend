@@ -1,7 +1,6 @@
-import { not } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LeaveServiceService } from '../leave-service.service';
+import { LeaveService } from '../services/leave.service';
 
 
 @Component({
@@ -15,7 +14,7 @@ export class LeaveDetailsPageComponent implements OnInit {
   constructor(
   
     private router: Router,
-    private leaveService: LeaveServiceService
+    private leaveService: LeaveService
   
   ) { }
 
@@ -62,3 +61,4 @@ export class LeaveDetailsPageComponent implements OnInit {
 function body(url: string, body: any) {
   throw new Error('Function not implemented.');
 }
+
