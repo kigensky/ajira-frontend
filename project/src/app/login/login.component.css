@@ -3,9 +3,6 @@
 
 
 
-
-
-
 form input{
   color:rgb(0, 0, 0);
 }
@@ -33,12 +30,16 @@ form input{
       line-height: 140px;
       letter-spacing: 4px;
       }
-      h1,p,label{
+      h1,label{
       color: rgb(8, 7, 7);
+      font-size: 15px;
       }
     
       label{
       margin: 5px 0px;
+      }
+      p{
+          font-size: 20px;
       }
       .form-control{
       outline: none;
