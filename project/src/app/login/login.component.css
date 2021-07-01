@@ -71,6 +71,10 @@ form input{
       .image{
         width: 100%;
       }
+      .fa{
+        padding-right: 10px;
+       
+    }
       @media(max-width:768px){
       .none{
       display: none;

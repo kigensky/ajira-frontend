@@ -156,3 +156,8 @@ h1,
     height: 102%;
     margin-top: 20px;
 }
+@media(max-width:768px){
+    .none{
+    display: none;
+    }
+    } 
