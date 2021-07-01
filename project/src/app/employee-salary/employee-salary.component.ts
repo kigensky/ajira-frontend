@@ -43,6 +43,7 @@ getEmployees() {
     if(data.data) {
       this.employees = data.data;
       // alert("Employee Created successfully")
+      
     } else {
       alert("Login to view the employees")
       // alert("Login to view the employees")
@@ -58,6 +59,7 @@ submit() {
     console.log("data", data)
     if(data.data) {
       alert("Salary added successfully")
+      this.router.navigate(["/employee-salary-details"])
     } else {
       alert("Something went wrong while adding salary")
     }

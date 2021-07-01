@@ -56,6 +56,7 @@ export class LeaveFormComponent implements OnInit {
       console.log("data", data)
       if(data.data) {
         alert("Leave Days Added successfully")
+        this.router.navigate(["/leave-details-page"])
       } else {
         alert("Something went wronng when creating the user")
       }

@@ -27,6 +27,7 @@ export class EmployeeSalaryDetailsComponent implements OnInit {
       if(data.data) {
         this.salaryData = data.data;
         // alert("Salary amended successfully")
+        
       } else {
         alert("No details found")
         // this.router.navigate(["/login"])
