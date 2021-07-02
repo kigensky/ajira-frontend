@@ -11,7 +11,7 @@ element.style {
     /* padding-right: 25px; */
     font-weight: 400;
     line-height: 2.3;
-    color: #18d3d3;
+    color: #0004ff;
     background-color: rgb(255, 255, 255);
     background-clip: padding-box;
     border: 1px solid #ced4da;
@@ -22,6 +22,8 @@ element.style {
     margin-left: 50px;
     border-radius: 0.25rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    font-size: medium;
+    
 }
 
 .btn-primary {
@@ -38,6 +40,7 @@ element.style {
     background-image: url(https://images.unsplash.com/photo-1593642532842-98d0fd5ebc1a?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80);
     height: 800px;
     background-size: cover;
+    object-fit: cover;
     color: black;
 }
 
@@ -46,6 +49,7 @@ body {
     font-family: var(--bs-font-sans-serif);
     font-size: 1rem;
     font-weight: 400;
+    font-family: 'Denk One', sans-serif;
     line-height: 1.5;
     color: #2984df;
     /* background-color: #fff; */

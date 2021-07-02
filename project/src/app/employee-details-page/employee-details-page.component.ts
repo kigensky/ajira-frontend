@@ -48,5 +48,13 @@ export class EmployeeDetailsPageComponent implements OnInit {
       }
     })
   }
-
+  updateThisEmployee(url) {
+    this.employeeService.loadPut(url, body).then((data:any) => {
+      this.router.navigate(["/create-employee-update"])  
+    })
+  }
 }
+function body(id: Number, body: any) {
+  throw new Error('Function not implemented.');
+}
+

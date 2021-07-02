@@ -1,8 +1,5 @@
-
-
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpResponse } from "@angular/common/http";
-
 @Injectable({
   providedIn: 'root'
 })
@@ -11,7 +8,6 @@ export class SalaryService {
   constructor(
     public http:HttpClient
   ) { }
-
   getToken(){
     return JSON.parse(localStorage.getItem("ajira-tkn"))
   }
@@ -21,7 +17,6 @@ export class SalaryService {
   getBaseURL() {
     return "https://ajira-enterprise.herokuapp.com/"
   }
-
   load(url) {
     return new Promise((resolve) => {
       if (this.getToken()) {
@@ -56,7 +51,6 @@ export class SalaryService {
       }
     });
   }
-
   /**
    * This method loadPost sends a POST request and returns the promise result
    *
@@ -99,7 +93,6 @@ export class SalaryService {
       });
     }
   }
-
   /**
    * This method loadDelete sends a DELETE request and returns the promise result
    *
@@ -143,7 +136,6 @@ export class SalaryService {
       }
     });
   }
-
   /**
    * This method loadPut sends a PUT request and returns the promise result
    *
@@ -186,7 +178,6 @@ export class SalaryService {
       }
     });
   }
-
   /**
    * This method loadPatch sends a PATCH request and returns the promise result
    *
@@ -230,4 +221,3 @@ export class SalaryService {
     });
   }
 }
-

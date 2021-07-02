@@ -1,10 +1,8 @@
-
 import { not } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { EmployeeServiceService } from '../services/employee-service.service';
 import { SalaryService } from '../services/salary.service';
-
 @Component({
   selector: 'app-employee-salary-details',
   templateUrl: './employee-salary-details.component.html',
@@ -12,23 +10,16 @@ import { SalaryService } from '../services/salary.service';
 })
 export class EmployeeSalaryDetailsComponent implements OnInit {
   public salaryData: any[] = []
-  
-  
-
   constructor(
     private router: Router,
     private salaryService: SalaryService,
-   
   ) { }
-
   ngOnInit(): void {
     if(!this.salaryService.getToken()) {
       this.router.navigate(["/login"])
     }
     this.fetchSalaryData();
-    
   }
-
   fetchSalaryData() { 
     let url= `${this.salaryService.getBaseURL()}api/employee_salary/`
     this.salaryService.load(url).then((data:any) => {
@@ -36,15 +27,13 @@ export class EmployeeSalaryDetailsComponent implements OnInit {
       if(data.data) {
         this.salaryData = data.data;
         // alert("Salary amended successfully")
+        
       } else {
         alert("No details found")
         // this.router.navigate(["/login"])
       }
-     
     })
-    
   }
-  
   UpdateThisSalary(id:Number) {
     this.salaryService.loadPut(id, body).then((data:any) => {
       // console.log("data", data)
@@ -61,7 +50,6 @@ export class EmployeeSalaryDetailsComponent implements OnInit {
       }
     })
   }
-
 }
 function body(url: string, body: any) {
   throw new Error('Function not implemented.');

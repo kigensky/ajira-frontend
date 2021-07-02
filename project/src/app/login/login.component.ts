@@ -9,8 +9,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  form: FormGroup;
-
+  form: FormGroup
   constructor(
     private formBuilder: FormBuilder,
     private http: HttpClient,
@@ -35,8 +34,8 @@ export class LoginComponent implements OnInit {
       if ((data) && (data.jwt)) {
         localStorage.setItem("ajira-tkn", JSON.stringify(data.jwt))
         this.router.navigate(['/']) 
-        
-      }else{
+        alert("login successfull")
+      } else{
         alert("Invalid credentials")
       }
     });
