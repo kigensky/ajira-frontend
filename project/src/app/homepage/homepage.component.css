@@ -11,11 +11,11 @@
 
 body {
     margin: 0;
-    font-family: var(--bs-font-sans-serif);
+    font-family: 'Denk One', sans-serif;
     font-size: 2rem;
     font-weight: 400;
     line-height: 2.7;
-    color: blue;
+    color: white;
     background-color: #ffffff;
     background-size: cover;
     background-repeat: no-repeat;
@@ -52,7 +52,7 @@ body {
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 1.25rem;
-    width: 94%;
+    width: 70%;
     box-shadow: #212529;
     margin-left: 10px;
     background: cover;
@@ -83,6 +83,7 @@ body {
 h1 {
     font-size: 2.5rem;
     color: white;
+    font-weight: 700;
 
 }
 

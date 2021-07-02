@@ -1,28 +1,61 @@
-# AngularAuth
+# Ajira Enterprise Frontend
+## Team Members
+* Victor Kigen
+* Natasha Kinuthia
+* Ismahan Abey
+* Shamso Darwish Abdi
+* Bernice Twili
+  
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
+  
+# Description  
+This is a website that allows an employer to manage employees’ details ranging from salary to leave dates
+  
+##  Live Link  
+ Click [View Site]()  to visit the site
+ 
 
-## Development server
+## User Story  
+  
+* Allows employer to login and add employees.
+* Allows admin to manage employee list.
+* Allows admin to add and manage employees’ leave days.
+* Allows admin to add and manage salary.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+  
+## MOCK-UP ON DEVICES SIZES
 
-## Code scaffolding
+>[MOCKUP](https://www.figma.com/file/s2NsJHJw8LQJpVRR7F2Ry0/AJIRA?node-id=0%3A1)
+  
+## Setup and Installation  
+To get the project .......  
+  
+##### Cloning the repository:  
+ ```bash 
+ https://github.com/kigensky/ajira-frontend
+```
+##### Navigate into the folder and install requirements  
+ ```bash 
+cd ajira-frontend
+```
+Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+  
+  
+## Technology used  
+  
+* HTML/CSS
+* Typescript
+* Angular
+* Bootstrap
+* JWT auth
+  
+  
+## Known Bugs  
+* There are no known bugs currently but pull requests are allowed incase you spot a bug  
+  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+  
+## License 
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-# angular-auth
+* [![License](https://img.shields.io/packagist/l/loopline-systems/closeio-api-wrapper.svg)](https://github.com/kigensky/ajira-frontend/blob/main/LICENCE)  
+* Copyright (c) 2021 **MORINGA**

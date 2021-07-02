@@ -47,7 +47,7 @@ element {
 
 body {
     margin: 0;
-    font-family: var(--bs-font-sans-serif);
+    font-family: 'Oswald', sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -100,7 +100,7 @@ label {
     width: 125%;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
-    border-radius: 0.25rem;
+    border-radius: 2rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
@@ -124,7 +124,7 @@ h1,
     font-size: 1.75rem;
     margin-left: 99px;
     padding-top: 20px;
-    color: rgb(18, 20, 163);
+    color: rgb(5, 23, 126);
     text-align: center;
     padding-left: 90px;
 }

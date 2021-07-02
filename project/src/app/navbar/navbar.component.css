@@ -5,6 +5,9 @@
 
 .nav-link {
     cursor: pointer;
+    /* font-family: 'Oswald', sans-serif; */
+    font-family: 'Denk One', sans-serif;
+    
 }
 
 nav {
@@ -12,8 +15,8 @@ nav {
 }
 
 h2 {
-    font-family: 'Pacifico', cursive;
-    ;
+    font-family: 'Denk One', sans-serif;
+    text-shadow: #111213;
 }
 
 element {
@@ -22,7 +25,7 @@ element {
 body {
     margin: 0;
     font-family: var(--bs-font-sans-serif);
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
@@ -32,4 +35,7 @@ body {
 }
 .fa{
     padding-right: 10px;
+}
+.nav-item{
+    margin-left: 70px;
 }

@@ -53,6 +53,7 @@ body {
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     background-size: cover;
+    font-family: 'Denk One', sans-serif;
 }
 
 .card {
@@ -68,6 +69,7 @@ body {
     border-radius: 0.25rem;
     height: 63%;
     margin-top: 10px;
+    
 }
 
 label {
@@ -131,6 +133,7 @@ h1,
     border-radius: 0.25rem;
     height: 60%;
     margin-top: 20px;
+    
 }
 h1[_ngcontent-hel-c17],
 .h1[_ngcontent-hel-c17] {
