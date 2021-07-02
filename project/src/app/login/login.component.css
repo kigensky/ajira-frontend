@@ -71,6 +71,11 @@ form input{
       .image{
         width: 100%;
       }
+      .images{
+        border-radius: 20%;
+        width: 30%;
+        margin-left: 183px;
+      }
       .fa{
         padding-right: 10px;
        

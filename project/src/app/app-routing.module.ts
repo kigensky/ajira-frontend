@@ -12,6 +12,7 @@ import { PostComponent } from './post/post.component';
 import { EmployeeSalaryComponent} from './employee-salary/employee-salary.component'
 import { EmployeeDetailsPageComponent } from './employee-details-page/employee-details-page.component';
 
+
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: "employee-salary-details", component: EmployeeSalaryDetailsComponent },
   {path : "leave-details-page", component: LeaveDetailsPageComponent},
   { path: "employee-salary", component: EmployeeSalaryComponent },
+  
 
 ];
 

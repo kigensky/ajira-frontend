@@ -33,8 +33,7 @@ export class LoginComponent implements OnInit {
       // this.router.navigate(['/']) }
       if ((data) && (data.jwt)) {
         localStorage.setItem("ajira-tkn", JSON.stringify(data.jwt))
-        this.router.navigate(['/']) 
-        
+        this.router.navigate(['/'])         
       }else{
         alert("Invalid credentials")
       }

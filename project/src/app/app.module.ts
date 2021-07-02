@@ -19,6 +19,7 @@ import { EmployeeSalaryDetailsComponent } from './employee-salary-details/employ
 import { LeaveDetailsPageComponent } from './leave-details-page/leave-details-page.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +35,7 @@ import { LeaveDetailsPageComponent } from './leave-details-page/leave-details-pa
     EmployeeDetailsPageComponent,
     EmployeeSalaryDetailsComponent,
     LeaveDetailsPageComponent,
+   
     
     
   ],
