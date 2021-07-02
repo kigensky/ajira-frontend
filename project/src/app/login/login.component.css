@@ -4,13 +4,15 @@
 
 
 form input{
-  color:rgb(0, 0, 0);
+  color:rgba(0, 0, 0, 0.767);
+  font-family: 'Denk One', sans-serif;
 }
 
 .container{
   padding-bottom: 50px;
   padding-top: 50px;
   margin-top: 50px;
+  
   
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
  
@@ -31,12 +33,17 @@ form input{
       letter-spacing: 4px;
       }
       h1,label{
-      color: rgb(8, 7, 7);
+      color: rgb(0, 0, 0);
       font-size: 15px;
+      font-family: 'Denk One', sans-serif;
       }
     
       label{
       margin: 5px 0px;
+      }
+      h2{
+        color: rgb(36, 36, 134);
+        font-family: 'Denk One', sans-serif;
       }
       p{
           font-size: 20px;
@@ -46,6 +53,7 @@ form input{
       border: none;
       background: none;
       border-bottom: 1px solid rgb(0, 0, 0);
+      font-family: 'Denk One', sans-serif;
       border-radius: 0px !important;
       }
       .form-control:focus,.form-control:hover{
@@ -57,6 +65,7 @@ form input{
       }
       .btn{
       border-radius: 0px;
+      font-family: 'Denk One', sans-serif;
       }
       .btn-custom,.btn-custom:focus{
         background: #5360d6;
