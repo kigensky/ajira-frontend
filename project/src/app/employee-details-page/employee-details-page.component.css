@@ -3,11 +3,11 @@
 }
 
 .btn {
-    margin-right: 10px;
+    margin-right: 35px;
 }
 
 .fa {
-    margin-right: 10px;
+    margin-right: 0px;
 }
 
 h1,
@@ -17,6 +17,7 @@ h1,
     font-weight: 200;
     line-height: 1.2;
     text-align: center;
+    font-family: 'Denk One', sans-serif;
 }
 
 .table-bordered> :not(caption)>*>* {

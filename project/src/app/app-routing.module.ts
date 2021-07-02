@@ -11,6 +11,7 @@ import { LeaveFormComponent } from './leave-form/leave-form.component';
 import { PostComponent } from './post/post.component';
 import { EmployeeSalaryComponent} from './employee-salary/employee-salary.component'
 import { EmployeeDetailsPageComponent } from './employee-details-page/employee-details-page.component';
+import { CreateEmployeeUpdateComponent } from './update/create-employee-update/create-employee-update.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -23,7 +24,7 @@ const routes: Routes = [
   { path: "employee-salary-details", component: EmployeeSalaryDetailsComponent },
   {path : "leave-details-page", component: LeaveDetailsPageComponent},
   { path: "employee-salary", component: EmployeeSalaryComponent },
-
+  { path: "create-employee-update/:id", component: CreateEmployeeUpdateComponent }
 ];
 
 @NgModule({

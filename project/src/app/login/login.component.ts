@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("ajira-tkn", JSON.stringify(data.jwt))
         this.router.navigate(['/']) 
         alert("login successfull")
-      }else{
+      } else{
         alert("Invalid credentials")
       }
     });

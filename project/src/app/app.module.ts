@@ -17,6 +17,7 @@ import { CommonModule } from '@angular/common';
 import { EmployeeDetailsPageComponent } from './employee-details-page/employee-details-page.component';
 import { EmployeeSalaryDetailsComponent } from './employee-salary-details/employee-salary-details.component';
 import { LeaveDetailsPageComponent } from './leave-details-page/leave-details-page.component';
+import { CreateEmployeeUpdateComponent } from './update/create-employee-update/create-employee-update.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { LeaveDetailsPageComponent } from './leave-details-page/leave-details-pa
     EmployeeDetailsPageComponent,
     EmployeeSalaryDetailsComponent,
     LeaveDetailsPageComponent,
+    CreateEmployeeUpdateComponent,
     
     
   ],

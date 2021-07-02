@@ -23,6 +23,7 @@ element.style {
     border-radius: 0.25rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     font-size: medium;
+    
 }
 
 .btn-primary {
@@ -48,6 +49,7 @@ body {
     font-family: var(--bs-font-sans-serif);
     font-size: 1rem;
     font-weight: 400;
+    font-family: 'Denk One', sans-serif;
     line-height: 1.5;
     color: #2984df;
     /* background-color: #fff; */
